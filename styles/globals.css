@@ -1,0 +1,18 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+.smooth{
+  @apply transition-all duration-300 ease-in-out
+}
+
+/* Hides the spinner in Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+/* Hides the spinner in Chrome, Safari, Edge, and Opera */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
