@@ -60,3 +60,22 @@ export const services =[
     },
 
 ]
+
+export const brands = [
+    {
+        brand:"Asian Paints",
+        image:"/images/partners/asian-paints.webp"
+    },
+    {
+        brand:"Fevicol",
+        image:"/images/partners/fevicol.svg"
+    },
+    {
+        brand:"Hettich",
+        image:"/images/partners/Hettich.svg"
+    },
+    {
+        brand:"Godrej",
+        image:"/images/partners/Godrej.png"
+    },
+]

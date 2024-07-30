@@ -5,14 +5,14 @@ import Alpha from "@/public/images/Brand/logo-black.png"
 import { useEffect, useState } from 'react';
 
 const Navbar = () => {
-    const [bgColor, setBgColor] = useState('bg-black/0');
+    const [bgColor, setBgColor] = useState('bg-black/40');
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
                 setBgColor('bg-black');
             } else {
-                setBgColor('bg-black/0');
+                setBgColor('bg-black/40');
             }
         };
 
@@ -24,8 +24,8 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`fixed w-full top-0 flex items-center justify-between px-20 py-4 h-28 ${bgColor} smooth`}>
-            <Link href={''} className='h-24 w-24 overflow-hidden'>
+        <div className={`fixed w-full flex items-center justify-between px-20 py-4 h-28 ${bgColor} smooth`} style={{zIndex:9999}}>
+            <Link href={''} className='h-24 w-24 overflow-hidden flex items-center justify-center'>
                 <Image src={Alpha} alt={'Alpha Solutions'} className='w-full h-auto' />
             </Link>
             <nav className='w-1/3'>
