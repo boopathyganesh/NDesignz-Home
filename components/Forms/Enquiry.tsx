@@ -1,5 +1,6 @@
-'use client'
-import { Button } from "@/components/ui/button"
+'use client';
+
+import { Button } from "@/components/ui/button";
 import {
     Card,
     CardContent,
@@ -7,49 +8,167 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import PhoneInput from "../ui/PhoneInput"
-import { useState } from "react"
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+import PhoneInput from "../ui/PhoneInput";
+import axios, { AxiosResponse } from "axios";
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
+
+const enquirySchema = z.object({
+    name: z.string().min(1, { message: "Name is required" }),
+    phone: z.string().regex(/^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/, { message: "Invalid Indian mobile number" }),
+    message: z.string().min(1, { message: "Message is required" }),
+});
+
+type EnquiryFormInputs = z.infer<typeof enquirySchema>;
 
 export default function EnquiryForm() {
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [isOpen, setIsOpen] = useState(false);
 
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
+    const form = useForm<EnquiryFormInputs>({
+        resolver: zodResolver(enquirySchema),
+    });
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log('Name:', name);
-        console.log('Phone:', phone);
+    const { handleSubmit } = form;
+
+    const loadInSheet = async (data: EnquiryFormInputs): Promise<any> => {
+        try {
+            const apiUrl = `https://ndesignz-server.vercel.app/enquiry`;
+            const response: AxiosResponse<any> = await axios.post(apiUrl,
+                {
+                    ...data
+                }
+            );
+            //console.log(response)
+            if (response && response.status === 200) {
+                return response.data;
+            } else {
+                throw new Error(`Failed to Write in Sheet`);
+            }
+        } catch (error) {
+            if (axios.isAxiosError(error)) {
+                console.error('Axios error:', error.message);
+                throw new Error(`Failed to Write in Sheet: ${error.message}`);
+            } else {
+                console.error('Unexpected error:', error);
+                throw new Error('An unexpected error occurred');
+            }
+        }
+    }
+
+    const onSubmit = async (data: EnquiryFormInputs) => {
+        setLoading(true);
+        data.phone = "+91" + data.phone
+        setError(null);
+
+        try {
+            const response = await loadInSheet(data)
+            //console.log(response)
+            if (response) {
+                setIsOpen(true)
+            }
+        } catch (err) {
+            console.error("Form submission error:", err);
+            setError("An error occurred during submission.");
+        } finally {
+            setLoading(false);
+        }
     };
-    return (
-        <form onSubmit={handleSubmit} action="post">
-            <Card className="w-full max-w-sm">
-                <CardHeader>
-                    <CardTitle className="text-2xl">Book a Free Consultation!</CardTitle>
-                    <CardDescription>
-                        Enter your contact details below to book a free consultations with our experts.
-                    </CardDescription>
-                </CardHeader>
-                <CardContent className="grid gap-4">
-                    <div className="grid gap-2">
-                        <Label htmlFor="email">Name</Label>
-                        <Input id="name" type="text" placeholder="Enter your Name" value={name} onChange={(e) => setName(e.target.value)} required />
-                    </div>
-                    <div className="grid gap-2">
-                        <Label htmlFor="password">Mobile Number</Label>
-                        <PhoneInput value={phone} onChange={(e) => setPhone(e.target.value)} />
-                    </div>
-                </CardContent>
-                <CardFooter className="flex flex-col items-start gap-2">
-                    <Button type="submit" className="w-full">Book Now!</Button>
-                    <span className="text-xs text-black-200 ">
-                        By booking our free consultation, your agree to our privacy policy and Terms and conditions
-                    </span>
-                </CardFooter>
-            </Card>
-        </form>
 
-    )
+    return (
+        <Form {...form}>
+            <form onSubmit={handleSubmit(onSubmit)} action="post" className="">
+                <Card className="w-full max-w-sm">
+                    <CardHeader className="px-5 py-3">
+                        <CardTitle className="text-2xl">Book a Free Consultation!</CardTitle>
+                        <CardDescription>
+                            Enter your contact details below to book a free consultation with our experts.
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className="grid gap-2 pb-1">
+                        <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field, fieldState }) => (
+                                <FormItem>
+                                    <FormLabel>Name</FormLabel>
+                                    <FormControl>
+                                        <Input placeholder="Enter your Name" {...field} className="w-full" disabled={loading} />
+                                    </FormControl>
+                                    {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="phone"
+                            render={({ field, fieldState }) => (
+                                <FormItem>
+                                    <FormLabel>Mobile Number</FormLabel>
+                                    <FormControl>
+                                        <PhoneInput {...field} className="w-full" disabled={loading} />
+                                    </FormControl>
+                                    {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="message"
+                            render={({ field, fieldState }) => (
+                                <FormItem>
+                                    <FormLabel>Message</FormLabel>
+                                    <FormControl>
+                                        <Textarea placeholder="Type your message here." {...field} className="w-full" disabled={loading} />
+                                    </FormControl>
+                                    {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
+                                </FormItem>
+                            )}
+                        />
+                    </CardContent>
+                    <CardFooter className="flex flex-col items-start gap-1 py-2">
+                        <Button type="submit" className="w-full" disabled={loading}>
+                            {loading ? "Booking..." : "Book Now!"}
+                        </Button>
+                        {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+                        <span className="text-xs text-black/40">
+                            By booking our free consultation, you agree to our privacy policy and Terms and conditions
+                        </span>
+                    </CardFooter>
+                </Card>
+            </form>
+            <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
+                <AlertDialogContent>
+                    <AlertDialogHeader>
+                        <AlertDialogTitle>You Enquiry Request was Recorded!</AlertDialogTitle>
+                        <AlertDialogDescription>
+                            You will be receiving a Call or Whatsapp Conversion regarding this enquiry from our Expert Designers.
+                        </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                        <AlertDialogCancel>Close</AlertDialogCancel>
+                    </AlertDialogFooter>
+                </AlertDialogContent>
+            </AlertDialog>
+        </Form>
+
+    );
 }

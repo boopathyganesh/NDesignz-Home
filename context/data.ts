@@ -63,19 +63,27 @@ export const services =[
 
 export const brands = [
     {
-        brand:"Asian Paints",
-        image:"/images/partners/asian-paints.webp"
+        brand:"Kohler",
+        image:"/images/partners/Kohler_Logo_CORP_2012-11-21_BLK.png"
     },
     {
-        brand:"Fevicol",
-        image:"/images/partners/fevicol.svg"
+        brand:"Luker",
+        image:"/images/partners/luker_logo.png"
     },
     {
-        brand:"Hettich",
-        image:"/images/partners/Hettich.svg"
+        brand:"NewMika",
+        image:"/images/partners/NewMika.svg"
     },
     {
-        brand:"Godrej",
-        image:"/images/partners/Godrej.png"
+        brand:"Carysil",
+        image:"/images/partners/carysil.png"
+    },
+    {
+        brand:"DoorSet",
+        image:"/images/partners/doorset.svg"
+    },
+    {
+        brand:"Merino",
+        image:"/images/partners/merino.svg"
     },
 ]
