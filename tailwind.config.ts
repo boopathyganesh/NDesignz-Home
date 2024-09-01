@@ -59,7 +59,7 @@ const config = {
           500: '#16161d',
           600: '#111116',
           700: '#0b0b0e',
-          DEFAULT: '#000000'
+          DEFAULT: '#0b0b0e'
         },
         gray: {
           100: '#f2f2f2',

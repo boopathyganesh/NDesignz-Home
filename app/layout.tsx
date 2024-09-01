@@ -24,7 +24,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </head>
       <ParallexWrap>
-        <body className={`${inter.className} bg-black`}>
+        <body className={`${inter.className} bg-black-700`}>
           <Navbar />
           <div className="min-h-screen w-full">
             {children}
