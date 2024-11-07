@@ -9,48 +9,48 @@ export default function Home() {
         <div className="flex flex-wrap -m-1 md:-m-2">
           <div className="flex flex-wrap w-1/2">
             <div className="w-1/2 p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset2.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset2.jpg" height={500} width={500} />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset1.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset1.jpg" height={500} width={500} />
             </div>
             <div className="w-full p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset3.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset3.jpg" height={500} width={500} />
             </div>
           </div>
           <div className="flex flex-wrap w-1/2">
             <div className="w-full p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset4.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset4.jpg" height={500} width={500} />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset5.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset5.jpg" height={500} width={500} />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset6.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset6.jpg" height={500} width={500} />
             </div>
           </div>
         </div>
         <div className="flex flex-wrap -m-1 md:-m-2">
           <div className="flex flex-wrap w-1/2">
             <div className="w-1/2 p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset2.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset2.jpg" height={500} width={500} />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset1.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset1.jpg" height={500} width={500} />
             </div>
             <div className="w-full p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset3.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset3.jpg" height={500} width={500} />
             </div>
           </div>
           <div className="flex flex-wrap w-1/2">
             <div className="w-full p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset4.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset4.jpg" height={500} width={500} />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset5.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset5.jpg" height={500} width={500} />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <Image alt="gallery" className="block object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset6.jpg" height={500} width={500} />
+              <Image alt="gallery" className="block hover:scale-105 smooth object-cover object-center w-full h-full rounded-lg" src="/images/assets/asset6.jpg" height={500} width={500} />
             </div>
           </div>
         </div>

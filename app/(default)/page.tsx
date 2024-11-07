@@ -10,7 +10,7 @@ import { Parallax } from "react-scroll-parallax";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main className="flex flex-col items-center justify-start">
       <Hero />
       <OurExpertise />
       <OurAchievements />

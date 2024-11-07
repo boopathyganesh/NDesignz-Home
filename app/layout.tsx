@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import ParallexWrap from "@/Providers/ParallexWrap";
+import ScrollToTop from "@/components/ui/Scroll2Top";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const merienda = Merienda({ subsets: ["latin"], display: "swap" });
@@ -23,15 +24,14 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </head>
-      <ParallexWrap>
-        <body className={`${inter.className} bg-black-700`}>
-          <Navbar />
-          <div className="min-h-screen w-full">
-            {children}
-          </div>
-          <Footer />
-        </body>
-      </ParallexWrap>
+      <body className={`${inter.className} bg-white relative`}>
+        <Navbar />
+        <div className="min-h-screen w-full h-full">
+          {children}
+        </div>
+        <ScrollToTop />
+        <Footer />
+      </body>
     </html>
   );
 }

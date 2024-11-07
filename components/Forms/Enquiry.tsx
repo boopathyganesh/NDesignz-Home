@@ -37,8 +37,10 @@ const enquirySchema = z.object({
 });
 
 type EnquiryFormInputs = z.infer<typeof enquirySchema>;
-
-export default function EnquiryForm() {
+interface EnquireProps {
+    onSuccessSubmit: () => void;
+}
+export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -90,12 +92,13 @@ export default function EnquiryForm() {
             setError("An error occurred during submission.");
         } finally {
             setLoading(false);
+            onSuccessSubmit();
         }
     };
 
     return (
         <Form {...form}>
-            <form onSubmit={handleSubmit(onSubmit)} action="post" className="">
+            <form onSubmit={handleSubmit(onSubmit)} action="post" className="max-h-90 overflow-y-auto">
                 <Card className="w-full max-w-sm">
                     <CardHeader className="px-5 py-3">
                         <CardTitle className="text-2xl">Book a Free Consultation!</CardTitle>
@@ -145,7 +148,7 @@ export default function EnquiryForm() {
                         />
                     </CardContent>
                     <CardFooter className="flex flex-col items-start gap-1 py-2">
-                        <Button type="submit" className="w-full" disabled={loading}>
+                        <Button type="submit" className="w-full hover:bg-teal-500 hover:text-black smooth" disabled={loading}>
                             {loading ? "Booking..." : "Book Now!"}
                         </Button>
                         {error && <p className="text-red-500 text-sm mt-2">{error}</p>}

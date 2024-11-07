@@ -22,7 +22,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fcca36;
+  background: #00bfbf;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -32,7 +32,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #fabb04;
+  background: #00bfbf;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
