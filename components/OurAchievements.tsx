@@ -22,7 +22,7 @@ const OurAchievements = () => {
             </div>
           </div>
           <div className='h-96 w-full overflow-hidden flex items-center' >
-            <Image src={'/images/asset_01.jpg'} width={500} height={500} alt={''} className='w-full group-hover:scale-105 group-hover:rotate-6 smooth' />
+            <Image src={'/images/assets/HomeBg/cover2.jpg'} width={500} height={500} alt={''} className='w-full group-hover:scale-105 group-hover:rotate-6 smooth' />
           </div>
           <div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quae quibusdam quas quo ex iure minus! Doloremque ipsum expedita at optio sit dolorum officia magnam, voluptatum reprehenderit ad quae. Fuga?</p>

@@ -5,13 +5,15 @@ import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import ParallexWrap from "@/Providers/ParallexWrap";
 import ScrollToTop from "@/components/ui/Scroll2Top";
+import { Toaster } from "@/components/ui/sonner";
+
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const merienda = Merienda({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "NDesignz - Your Interior Pro",
-  description: "NDesignz - Your Interior Pro",
+  title: "Livstyle Homes - Your Interior Pro",
+  description: "Livstyle Homes - Your Interior Pro",
 };
 
 export default function RootLayout({
@@ -30,6 +32,7 @@ export default function RootLayout({
           {children}
         </div>
         <ScrollToTop />
+        <Toaster />
         <Footer />
       </body>
     </html>

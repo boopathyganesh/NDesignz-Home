@@ -13,7 +13,7 @@ const FAQ = () => {
     return (
         <section className='max-w-7xl w-full text-black pb-10 flex flex-col items-center justify-center gap-10'>
             <div className='text-4xl font-semibold text-center text-teal-700'>
-                <h1>FAQs About Home Interior Design</h1>
+                <h1>Frequently Asked Questions</h1>
             </div>
             <Accordion type="single" collapsible className='max-w-4xl mx-auto w-full' defaultValue="0">
                 {FAQData.map((faq, index) => (

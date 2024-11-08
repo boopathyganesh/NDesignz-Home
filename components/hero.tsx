@@ -53,7 +53,7 @@ const Hero = () => {
         </Carousel>
         <div className='absolute top-[40%] left-[50%] -translate-x-[50%] transform w-max flex flex-col items-center justify-center gap-5 p-5 rounded-2xl bg-black/50'>
           <div className='flex flex-col items-center justify-center text-center'>
-            <h1 className='text-white text-4xl leading-tight '>Creating Homes That Tell Your Story</h1>
+            <h1 className='text-white text-4xl leading-tight'>Unveil the Art of Indian Elegance - Interiors That Speak to the Soul</h1>
             <p className='text-white/90 mt-3 max-w-xl text-xl'>Making your home so beautiful, you'll never want to leave</p>
           </div>
           <div className='flex items-center justify-center gap-5'>

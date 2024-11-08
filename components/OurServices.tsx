@@ -13,11 +13,11 @@ import Autoplay from 'embla-carousel-autoplay'
 
 const OurServices = () => {
     return (
-        <section id='services' className='max-w-7xl'>
-            <div className='flex flex-col items-center justify-center text-white gap-4'>
+        <section id='services' className='max-w-7xl my-10'>
+            <div className='flex flex-col items-center justify-center text-black gap-4'>
                 <div className='flex flex-col items-center justify-center text-center'>
-                    <h1 className='text-4xl text-teal-700 font-semibold mb-3'>Our Services</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus veniam iusto ex, doloremque exercitationem modi voluptatem necessitatibus alias culpa. Nobis, nihil molestiae? Beatae debitis tempore earum saepe atque hic harum.</p>
+                    <h1 className='text-4xl text-teal-700 font-semibold mb-3'>Crafting Your Dream Spaces</h1>
+                    <p>Transform your home or workspace into a beautiful blend of modern elegance and Indian charm. At <span className='text-teal font-semibold'>Livstyle Homes</span>, we design interiors that are not only stylish and functional but also deeply connected to the warmth of Indian culture. From vibrant living rooms and streamlined modular kitchens to custom furniture that speaks to your unique taste, we bring your dream spaces to life with creativity and craftsmanship.</p>
                 </div>
                 <div className='my-10 flex items-center justify-center gap-10'>
                     <Carousel opts={{ loop: true, dragFree: true }} plugins={[

@@ -40,7 +40,7 @@ type EnquiryFormInputs = z.infer<typeof enquirySchema>;
 interface EnquireProps {
     onSuccessSubmit: () => void;
 }
-export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
+export default function ConnectForm({ onSuccessSubmit }: EnquireProps) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +53,7 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
 
     const loadInSheet = async (data: EnquiryFormInputs): Promise<any> => {
         try {
-            const apiUrl = `https://ndesignz-server.vercel.app/enquiry`;
+            const apiUrl = `https://ndesignz-server.vercel.app/connect`;
             const response: AxiosResponse<any> = await axios.post(apiUrl,
                 {
                     ...data
@@ -100,21 +100,18 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
     return (
         <Form {...form}>
             <form onSubmit={handleSubmit(onSubmit)} action="post" className="max-h-90 overflow-y-auto">
-                <Card className="w-full max-w-sm">
-                    <CardHeader className="px-5 py-3">
-                        <CardTitle className="text-2xl">Book a Free Consultation!</CardTitle>
-                        <CardDescription>
-                            Enter your contact details below to book a free consultation with our experts.
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent className="grid gap-2 pb-1">
+                <div className="flex flex-col items-center justify-start w-full gap-5">
+                    <div className="flex items-center justify-center w-full">
+                        <h1 className="text-4xl font-semibold text-teal-700 mb-3 text-center">Let’s Start Your Design Journey!</h1>
+                    </div>
+                    <div className="w-full flex flex-col items-center justify-start gap-5 px-10">
                         <FormField
                             control={form.control}
                             name="name"
                             render={({ field, fieldState }) => (
-                                <FormItem>
+                                <FormItem className="w-full">
                                     <FormLabel>Name</FormLabel>
-                                    <FormControl>
+                                    <FormControl className="w-full">
                                         <Input placeholder="Enter your Name" {...field} className="w-full" disabled={loading} />
                                     </FormControl>
                                     {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
@@ -125,9 +122,9 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
                             control={form.control}
                             name="phone"
                             render={({ field, fieldState }) => (
-                                <FormItem>
+                                <FormItem className="w-full">
                                     <FormLabel>Mobile Number</FormLabel>
-                                    <FormControl>
+                                    <FormControl className="w-full">
                                         <PhoneInput {...field} className="w-full" disabled={loading} />
                                     </FormControl>
                                     {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
@@ -138,31 +135,28 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
                             control={form.control}
                             name="message"
                             render={({ field, fieldState }) => (
-                                <FormItem>
+                                <FormItem className="w-full">
                                     <FormLabel>Message</FormLabel>
-                                    <FormControl>
+                                    <FormControl className="w-full">
                                         <Textarea placeholder="Type your message here." {...field} className="w-full" disabled={loading} />
                                     </FormControl>
                                     {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
                                 </FormItem>
                             )}
                         />
-                    </CardContent>
-                    <CardFooter className="flex flex-col items-start gap-1 py-2">
+                    </div>
+                    <div>
                         <Button type="submit" className="w-full hover:bg-teal-500 hover:text-black smooth" disabled={loading}>
-                            {loading ? "Booking..." : "Book Now!"}
+                            {loading ? "Sending..." : "Send!"}
                         </Button>
                         {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
-                        <span className="text-xs text-black/40">
-                            By booking our free consultation, you agree to our privacy policy and Terms and conditions
-                        </span>
-                    </CardFooter>
-                </Card>
+                    </div>
+                </div>
             </form>
             <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
                 <AlertDialogContent>
                     <AlertDialogHeader>
-                        <AlertDialogTitle>You Enquiry Request was Recorded!</AlertDialogTitle>
+                        <AlertDialogTitle>You Connection Request was Recorded!</AlertDialogTitle>
                         <AlertDialogDescription>
                             You will be receiving a Call or Whatsapp Conversion regarding this enquiry from our Expert Designers.
                         </AlertDialogDescription>

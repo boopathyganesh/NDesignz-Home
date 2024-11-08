@@ -1,33 +1,28 @@
 export const expertise = [
     {
         title: "20 Years Warranty",
-        icon: "/images/svg/bed.svg",
+        icon: "/images/assets/warrenty.png",
         content: "As Long As 20 Years On Product & Services"
     },
     {
         title: "50 Quality Checks",
-        icon: "/images/svg/bed.svg",
+        icon: "/images/assets/quality.png",
         content: "Prior To Dispatch And Conveyance"
     },
     {
         title: "45 Days Delivery",
-        icon: "/images/svg/bed.svg",
+        icon: "/images/assets/delivery.png",
         content: "Get Customized Home Insides In Only 45 Days"
     },
     {
         title: "Personalized Designer",
-        icon: "/images/svg/bed.svg",
+        icon: "/images/assets/designer.png",
         content: "However Novel As You May Be"
     },
     {
         title: "End to End Solutions",
-        icon: "/images/svg/bed.svg",
+        icon: "/images/assets/solution.png",
         content: "We Embrace Start To Finish Administrations"
-    },
-    {
-        title: "No Hidden Costs",
-        icon: "/images/svg/bed.svg",
-        content: "Ensures Shock - Free Quotations"
     },
 ]
 
