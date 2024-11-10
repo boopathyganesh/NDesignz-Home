@@ -59,7 +59,7 @@ const Navbar = () => {
                         <Link className='text-black hover:text-teal-600' href={'/#services'}>Services</Link>
                     </li>
                     <li>
-                        <Link className='text-black hover:text-teal-600' href={'/'}>About Us</Link>
+                        <Link className='text-black hover:text-teal-600' href={'/about'}>About Us</Link>
                     </li>
                 </ul>
             </nav>

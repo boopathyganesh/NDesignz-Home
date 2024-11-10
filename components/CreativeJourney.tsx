@@ -7,13 +7,13 @@ interface Props {
 }
 const CreativeCard = ({ image, text, content }: Props) => {
   return (
-    <div className='flex items-center justify-center rounded-3xl relative w-96 h-96 border border-teal overflow-hidden p-3 group smooth' style={{ zIndex: 999 }}>
+    <div className='flex items-center justify-center rounded-3xl relative w-80 h-80 border border-teal overflow-hidden p-3 group smooth' style={{ zIndex: 999 }}>
       <Image src={image} alt={''} height={800} width={800} style={{ zIndex: 1010 }} />
       <div style={{ zIndex: 1200 }} className='flex flex-col items-center justify-center gap-3 text-center absolute top-0 left-[50%] transform smooth -translate-x-[50%] translate-y-96 group-hover:translate-y-0 backdrop-blur-md h-full w-full bg-white/40'>
         <h1 className='text-2xl font-medium text-teal'>{text}</h1>
-        <p className='max-w-72'>{content}</p>
+        <p className='max-w-72 text-sm'>{content}</p>
       </div>
-      <h1 className='text-2xl font-medium text-teal absolute top-0 h-full w-full text-center flex items-center justify-center backdrop-blur-sm bg-white/60' style={{ zIndex: "1011" }}>{text}</h1>
+      <h1 className='text-2xl font-semibold text-teal-700 absolute top-0 h-full w-full text-center flex items-center justify-center backdrop-blur-sm bg-white/60' style={{ zIndex: "1011" }}>{text}</h1>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const Partners = () => {
             <div className='my-10'>
                 <h1 className='text-center text-4xl text-teal-700 font-semibold mb-2'>Our Trusted World Grade Partners</h1>
             </div>
-            <div className='flex items-center justify-center mb-20'>
+            <div className='flex items-center justify-center mb-10'>
                 <Marquee speed={30} loop={0} autoFill gradient gradientColor='#b1efef' gradientWidth={200} className='bg-white h-24 overflow-hidden filter bg-blend-color-burn'>
                     {brands.map((item, index) => (
                         <div key={index} className='flex items-center justify-center w-32 ml-24 overflow-hidden'>

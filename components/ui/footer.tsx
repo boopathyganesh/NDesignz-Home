@@ -7,7 +7,7 @@ import { FaMailBulk } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className='max-w-full flex flex-col items-center justify-end w-full h-max text-white bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url("/images/assets/HomeBg/cover.jpg")` }}>
-            <div className='flex items-center justify-between w-full py-5 lg:px-56 bg-black/70'>
+            <div className='flex items-center justify-between w-full py-5 lg:px-36 bg-black/70'>
                 <div className='flex flex-col items-start justify-center gap-3 max-w-96 text-left'>
                     <div className='flex items-center justify-center p-2 bg-white rounded-xl'>
                         <Image src={'/images/Brand/brand.svg'} alt={''} height={200} width={200} />
@@ -16,7 +16,7 @@ const Footer = () => {
                 </div>
 
                 <div className='w-full flex items-start justify-evenly gap-5 text-lg'>
-                    <div className='flex flex-col items-start justify-center'>
+                    <div className='flex flex-col items-start justify-center w-96'>
                         <h4 className='font-medium mb-3'>Quick Access</h4>
                         <ul className='w-full list-inside pl-5 flex flex-col items-start justify-center gap-1'>
                             <li className='text-center flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
@@ -41,20 +41,20 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className='flex flex-col items-start justify-center'>
+                    <div className='flex flex-col items-start justify-center text-start max-w-[500px]'>
                         <h4 className='font-medium mb-3'>Contact Information</h4>
                         <ul className='w-full list-inside pl-5 flex flex-col items-start justify-center gap-3'>
-                            <li className='text-center flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <FaPhone className='group-hover:text-gold-500' />
-                                Phone: <span>+91 9876543210</span>
+                            <li className='flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
+                                <FaPhone className='group-hover:text-gold-500 text-xl' />
+                                Phone: <span>+91 8610933642</span>
                             </li>
-                            <li className='text-center flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <FaMailBulk className='group-hover:text-gold-500' />
-                                Email: <span>support@livstylehomes.com</span>
+                            <li className='flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
+                                <FaMailBulk className='group-hover:text-gold-500 text-xl' />
+                                Email: <span>livstylehomescbe@gmail.com</span>
                             </li>
-                            <li className='text-center flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <FaAddressBook className='group-hover:text-gold-500' />
-                                Address : <span></span>
+                            <li className='flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
+                                <FaAddressBook className='group-hover:text-gold-500 text-xl' />
+                                Address : 1/291, Ramasamy Gounder Street, Near RV Hospital, Chinniyampalayam, 641062
                             </li>
                         </ul>
                     </div>
@@ -63,7 +63,7 @@ const Footer = () => {
             <div className='max-w-full flex items-center justify-center w-full text-white border-t border-dashed border-white h-14 bg-teal'>
                 <div className='max-w-7xl flex items-center justify-between w-full'>
                     <div>Powered by <Link href={'#'} className='text-gold-500 font-semibold'>iroX</Link></div>
-                    <div>Copyright &copy; {new Date().getFullYear()} <span className='text-gold-400'>NDesignz</span> - All Rights Reserved.</div>
+                    <div>Copyright &copy; {new Date().getFullYear()} <span className='text-gold-400'>Livestyle Homes</span> - All Rights Reserved.</div>
                 </div>
             </div>
         </footer>

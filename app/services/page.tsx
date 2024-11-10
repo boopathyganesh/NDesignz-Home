@@ -6,9 +6,6 @@ export default function Home() {
   return (
     <main className="overflow-hidden text-gray-700 ">
       <div className="flex flex-col items-center justify-center gap-4 px-5 py-2 mx-auto lg:pt-24 lg:px-32 mt-10">
-        <div className="flex items-center justify-center text-center">
-          <h1 className="text-3xl text-teal-700 font-semibold">Our Precious Gallery</h1>
-        </div>
         <div className="flex flex-wrap -m-1 md:-m-2">
           <div className="flex flex-wrap w-1/2">
             <div className="w-1/2 p-1 md:p-2">
