@@ -13,7 +13,7 @@ import Connect from "@/components/Connect";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-start">
+    <main className="relative flex flex-col items-center justify-center overflow-hidden">
       <Hero />
       <AboutUs />
       <OurExpertise />

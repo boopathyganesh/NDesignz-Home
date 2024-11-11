@@ -100,9 +100,9 @@ export default function ConnectForm({ onSuccessSubmit }: EnquireProps) {
     return (
         <Form {...form}>
             <form onSubmit={handleSubmit(onSubmit)} action="post" className="max-h-90 overflow-y-auto">
-                <div className="flex flex-col items-center justify-start w-full gap-5">
+                <div className="flex flex-col items-center justify-start w-full gap-5 my-8 md:my-0">
                     <div className="flex items-center justify-center w-full">
-                        <h1 className="text-4xl font-semibold text-teal-700 mb-3 text-center">Let’s Start Your Design Journey!</h1>
+                        <h1 className="text-2xl md:text-4xl font-semibold text-teal-700 mb-3 text-center">Let’s Start Your Design Journey!</h1>
                     </div>
                     <div className="w-full flex flex-col items-center justify-start gap-5 px-10">
                         <FormField

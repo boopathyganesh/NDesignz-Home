@@ -3,7 +3,6 @@ import { Inter, Merienda } from "next/font/google";
 import "@/styles/globals.css";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
-import ParallexWrap from "@/Providers/ParallexWrap";
 import ScrollToTop from "@/components/ui/Scroll2Top";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -26,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </head>
-      <body className={`${inter.className} bg-white relative`}>
+      <body className={`${inter.className} bg-white`}>
         <Navbar />
         <div className="min-h-screen w-full h-full">
           {children}

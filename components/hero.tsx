@@ -35,7 +35,7 @@ const Hero = () => {
   };
 
   return (
-    <section className='max-w-full h-[750px] w-full flex items-center justify-center gap-4 bg-white/10 bg-center bg-cover bg-opacity-15 overflow-hidden'>
+    <section className='max-w-sm md:max-w-4xl lg:max-w-full h-[370px] mt-20 md:mt-32 lg:mt-0 lg:h-[750px] w-full flex items-center justify-center gap-4 bg-white/10 bg-center bg-cover bg-opacity-15 overflow-hidden'>
       <div className='w-full h-full flex items-center justify-center relative'>
         <Carousel opts={{ loop: true, dragFree: true }} plugins={[
           Autoplay({ delay: 4000 })
@@ -48,13 +48,13 @@ const Hero = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className='text-white bg-teal border-none absolute left-10' />
-          <CarouselNext className='text-white bg-teal border-none  absolute right-10' />
+          <CarouselPrevious className='text-white bg-teal border-none hidden md:flex absolute left-5 lg:left-10' />
+          <CarouselNext className='text-white bg-teal border-none hidden md:flex absolute right-5 lg:right-10' />
         </Carousel>
-        <div className='absolute top-[40%] left-[50%] -translate-x-[50%] transform w-max flex flex-col items-center justify-center gap-5 p-5 rounded-2xl bg-black/50'>
+        <div className='absolute top-[35%] lg:top-[40%] left-[50%] -translate-x-[50%] transform w-full lg:w-max flex flex-col items-center justify-center gap-5 p-5 lg:rounded-2xl lg:bg-black/50'>
           <div className='flex flex-col items-center justify-center text-center'>
-            <h1 className='text-white text-4xl leading-tight'>Unveil the Art of Indian Elegance - Interiors That Speak to the Soul</h1>
-            <p className='text-white/90 mt-3 max-w-xl text-xl'>Making your home so beautiful, you'll never want to leave</p>
+            <h1 className='text-white text-xl lg:text-2xl xl:text-4xl leading-tight font-medium'>Unveil the Art of Indian Elegance - Interiors That Speak to the Soul</h1>
+            <p className='text-white/90 mt-3 max-w-xl text-base lg:text-xl'>Making your home so beautiful, you'll never want to leave</p>
           </div>
           <div className='flex items-center justify-center gap-5'>
             <Button onClick={() => setOpenDialog(true)} className='hover:scale-105'>Lets Talk</Button>
