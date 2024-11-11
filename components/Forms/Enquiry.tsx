@@ -18,21 +18,13 @@ import { useState } from "react";
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import PhoneInput from "../ui/PhoneInput";
 import axios, { AxiosResponse } from "axios";
-import {
-    AlertDialog,
-    AlertDialogAction,
-    AlertDialogCancel,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle,
-    AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
 
 const enquirySchema = z.object({
     name: z.string().min(1, { message: "Name is required" }),
-    phone: z.string().regex(/^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/, { message: "Invalid Indian mobile number" }),
+    phone: z.string().regex(
+        /^(\+(\d{1,3})[\-\s]?)?(\d{10}|\d{7,15})$/,
+        { message: "Invalid phone number" }
+    ),
     message: z.string().min(1, { message: "Message is required" }),
 });
 
@@ -43,7 +35,6 @@ interface EnquireProps {
 export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [isOpen, setIsOpen] = useState(false);
 
     const form = useForm<EnquiryFormInputs>({
         resolver: zodResolver(enquirySchema),
@@ -78,14 +69,16 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
 
     const onSubmit = async (data: EnquiryFormInputs) => {
         setLoading(true);
-        data.phone = "+91" + data.phone
+        //console.log(data.phone);
+
+        data.phone = data.phone
         setError(null);
 
         try {
             const response = await loadInSheet(data)
             //console.log(response)
             if (response) {
-                setIsOpen(true)
+                //setIsOpen(true)
                 form.reset()
                 onSuccessSubmit();
             }
@@ -159,19 +152,7 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
                     </CardFooter>
                 </Card>
             </form>
-            <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
-                <AlertDialogContent>
-                    <AlertDialogHeader>
-                        <AlertDialogTitle>You Enquiry Request was Recorded!</AlertDialogTitle>
-                        <AlertDialogDescription>
-                            You will be receiving a Call or Whatsapp Conversion regarding this enquiry from our Expert Designers.
-                        </AlertDialogDescription>
-                    </AlertDialogHeader>
-                    <AlertDialogFooter>
-                        <AlertDialogCancel>Close</AlertDialogCancel>
-                    </AlertDialogFooter>
-                </AlertDialogContent>
-            </AlertDialog>
+
         </Form>
 
     );

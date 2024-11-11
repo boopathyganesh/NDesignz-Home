@@ -32,7 +32,10 @@ import {
 
 const enquirySchema = z.object({
     name: z.string().min(1, { message: "Name is required" }),
-    phone: z.string().regex(/^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/, { message: "Invalid Indian mobile number" }),
+    phone: z.string().regex(
+        /^(\+(\d{1,3})[\-\s]?)?(\d{10}|\d{7,15})$/,
+        { message: "Invalid phone number" }
+    ),
     message: z.string().min(1, { message: "Message is required" }),
 });
 
@@ -78,7 +81,7 @@ export default function ConnectForm({ onSuccessSubmit }: EnquireProps) {
 
     const onSubmit = async (data: EnquiryFormInputs) => {
         setLoading(true);
-        data.phone = "+91" + data.phone
+        data.phone = data.phone
         setError(null);
 
         try {
@@ -86,7 +89,7 @@ export default function ConnectForm({ onSuccessSubmit }: EnquireProps) {
             //console.log(response)
             if (response) {
                 setIsOpen(true)
-                form.reset()
+                form.reset({ message: "", phone: "", name: "" })
                 onSuccessSubmit();
             }
         } catch (err) {

@@ -21,6 +21,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 import { HomeBg } from '@/context/data'
 import Autoplay from "embla-carousel-autoplay"
 type PointerDownOutsideEvent = CustomEvent<{ originalEvent: PointerEvent }>;
@@ -28,11 +39,17 @@ type FocusOutsideEvent = CustomEvent<{ originalEvent: FocusEvent }>;
 
 const Hero = () => {
   const [openDialog, setOpenDialog] = useState<boolean>(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleInteractionOutside = (event: PointerDownOutsideEvent | FocusOutsideEvent) => {
     event.preventDefault();
     event.stopPropagation();
   };
+
+  function handleSuccess() {
+    setOpenDialog(false)
+    setIsOpen(true)
+  }
 
   return (
     <section className='max-w-sm md:max-w-4xl lg:max-w-full h-[370px] mt-20 md:mt-32 lg:mt-0 lg:h-[750px] w-full flex items-center justify-center gap-4 bg-white/10 bg-center bg-cover bg-opacity-15 overflow-hidden'>
@@ -70,10 +87,23 @@ const Hero = () => {
           <DialogHeader>
             <DialogTitle></DialogTitle>
             <DialogDescription></DialogDescription>
-            <EnquiryForm onSuccessSubmit={() => setOpenDialog(false)} />
+            <EnquiryForm onSuccessSubmit={() => handleSuccess()} />
           </DialogHeader>
         </DialogContent>
       </Dialog>
+      <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>You Enquiry Request was Recorded!</AlertDialogTitle>
+            <AlertDialogDescription>
+              You will be receiving a Call or Whatsapp Conversion regarding this enquiry from our Expert Designers.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Close</AlertDialogCancel>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </section>
   )
 }
