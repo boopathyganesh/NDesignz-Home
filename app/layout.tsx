@@ -32,7 +32,7 @@ export default function RootLayout({
           {children}
         </div>
         {process.env.NODE_ENV === 'production' && (
-          <GoogleAnalytics trackingId="G-98WCNKEQJE" />
+          <GoogleAnalytics trackingId="G-LN82J7GXJJ" />
         )}
         <ScrollToTop />
         <Toaster />
