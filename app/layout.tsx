@@ -5,6 +5,7 @@ import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import ScrollToTop from "@/components/ui/Scroll2Top";
 import { Toaster } from "@/components/ui/sonner";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -30,6 +31,9 @@ export default function RootLayout({
         <div className="min-h-screen w-full h-full">
           {children}
         </div>
+        {process.env.NODE_ENV === 'production' && (
+          <GoogleAnalytics trackingId="G-98WCNKEQJE" />
+        )}
         <ScrollToTop />
         <Toaster />
         <Footer />
