@@ -1,3 +1,4 @@
+"use client"
 // GoogleAnalytics.tsx
 import { useEffect } from 'react';
 import Script from 'next/script';
