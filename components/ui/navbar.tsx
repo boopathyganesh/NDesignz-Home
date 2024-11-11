@@ -47,7 +47,7 @@ const Navbar = () => {
             <Link href={''} className='h-32 w-40 overflow-hidden flex items-center justify-center'>
                 <Image src={Brand} alt={'Alpha Solutions'} className='w-full h-auto' />
             </Link>
-            <nav className='w-1/3'>
+            <nav className='w-1/2'>
                 <ul className='list-none w-full flex items-center justify-between text-gold-400 font-medium text-lg'>
                     <li>
                         <Link className='text-black hover:text-teal-600' href={'/'}>Home</Link>
@@ -60,6 +60,9 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link className='text-black hover:text-teal-600' href={'/about'}>About Us</Link>
+                    </li>
+                    <li>
+                        <Link className='text-black hover:text-teal-600' href={'/contact'}>Contact</Link>
                     </li>
                 </ul>
             </nav>
