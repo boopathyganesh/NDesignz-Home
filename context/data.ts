@@ -1,7 +1,7 @@
 export const expertise = [
     {
         title: "20 Years Warranty",
-        icon: "/images/assets/warrenty.png",
+        icon: "/images/assets/warranty.png",
         content: "As Long As 20 Years On Product & Services"
     },
     {
@@ -36,9 +36,9 @@ export const HomeBg = [
     {
         Image: "/images/assets/HomeBg/cover.jpg",
     },
-    {
-        Image: "/images/assets/HomeBg/cover2.jpg",
-    },
+    // {
+    //     Image: "/images/assets/HomeBg/cover2.jpg",
+    // },
     {
         Image: "/images/assets/HomeBg/cover3.jpg",
     },
