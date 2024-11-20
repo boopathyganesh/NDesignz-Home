@@ -34,6 +34,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import { HomeBg } from '@/context/data'
 import Autoplay from "embla-carousel-autoplay"
+import * as gtag from '../lib/gtag';
 type PointerDownOutsideEvent = CustomEvent<{ originalEvent: PointerEvent }>;
 type FocusOutsideEvent = CustomEvent<{ originalEvent: FocusEvent }>;
 
@@ -47,6 +48,12 @@ const Hero = () => {
   };
 
   function handleSuccess() {
+    gtag.event({
+      action: 'click_button',
+      category: 'Button',
+      label: 'Subscribe Now',
+      value: 1,
+    });
     setOpenDialog(false)
     setIsOpen(true)
   }

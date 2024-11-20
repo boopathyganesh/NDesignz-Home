@@ -1,3 +1,4 @@
+'use client'
 import type { Metadata } from "next";
 import { Inter, Merienda } from "next/font/google";
 import "@/styles/globals.css";
@@ -6,7 +7,10 @@ import Footer from "@/components/ui/footer";
 import ScrollToTop from "@/components/ui/Scroll2Top";
 import { Toaster } from "@/components/ui/sonner";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-
+import Script from "next/script";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+import * as gtag from '../lib/gtag';
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const merienda = Merienda({ subsets: ["latin"], display: "swap" });
@@ -21,6 +25,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    gtag.pageview(pathname);
+  }, [pathname]);
   return (
     <html lang="en">
       <head>
@@ -37,9 +46,28 @@ export default function RootLayout({
         <div className="min-h-screen w-full h-full">
           {children}
         </div>
-        {process.env.NODE_ENV === 'production' && (
+        {/* {process.env.NODE_ENV === 'production' && (
           <GoogleAnalytics trackingId="G-LN82J7GXJJ" />
-        )}
+        )} */}
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
         <ScrollToTop />
         <Toaster />
         <Footer />

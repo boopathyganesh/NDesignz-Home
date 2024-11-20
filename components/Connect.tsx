@@ -3,9 +3,15 @@ import React from 'react'
 import Image from 'next/image'
 import { toast } from 'sonner'
 import ConnectForm from './Forms/ConnectForm'
-
+import * as gtag from '../lib/gtag';
 const Connect = () => {
   function handleSucess() {
+    gtag.event({
+      action: 'click_button',
+      category: 'Button',
+      label: 'Subscribe Now',
+      value: 1,
+    });
     toast.success("Thank You for choosing Livstyle Homes!")
     toast.success("Your Enquiry Request has been Received!")
   }

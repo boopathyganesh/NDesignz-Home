@@ -16,6 +16,7 @@ import {
 import { Button } from './button';
 import EnquiryForm from '../Forms/Enquiry';
 import { useRouter } from 'next/navigation';
+import * as gtag from '@/lib/gtag';
 
 type PointerDownOutsideEvent = CustomEvent<{ originalEvent: PointerEvent }>;
 type FocusOutsideEvent = CustomEvent<{ originalEvent: FocusEvent }>;
@@ -137,7 +138,14 @@ const Navbar = () => {
                     <DialogHeader>
                         <DialogTitle></DialogTitle>
                         <DialogDescription></DialogDescription>
-                        <EnquiryForm onSuccessSubmit={() => setOpenDialog(false)} />
+                        <EnquiryForm onSuccessSubmit={() => {
+                            setOpenDialog(false); gtag.event({
+                                action: 'click_button',
+                                category: 'Button',
+                                label: 'Subscribe Now',
+                                value: 1,
+                            });
+                        }} />
                     </DialogHeader>
                 </DialogContent>
             </Dialog>
