@@ -8,9 +8,7 @@ import ScrollToTop from "@/components/ui/Scroll2Top";
 import { Toaster } from "@/components/ui/sonner";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
-import * as gtag from '../lib/gtag';
+import GAnalytics from "@/components/Analytics";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const merienda = Merienda({ subsets: ["latin"], display: "swap" });
@@ -25,11 +23,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    gtag.pageview(pathname);
-  }, [pathname]);
   return (
     <html lang="en">
       <head>
@@ -43,6 +36,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-white`}>
         <Navbar />
+        <GAnalytics />
         <div className="min-h-screen w-full h-full">
           {children}
         </div>
