@@ -1,4 +1,3 @@
-'use client'
 import type { Metadata } from "next";
 import { Inter, Merienda } from "next/font/google";
 import "@/styles/globals.css";
