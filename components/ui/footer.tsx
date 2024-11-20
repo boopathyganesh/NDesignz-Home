@@ -17,34 +17,34 @@ const Footer = () => {
 
                 <div className='w-full flex flex-col lg:flex-row items-center lg:items-start justify-evenly gap-5 lg:text-lg'>
                     <div className='flex flex-col items-start justify-center w-max lg:w-96'>
-                        <h4 className='font-medium mb-3 my-3 lg:my-0'>Quick Access</h4>
+                        <h4 className='font-medium mb-3 my-3 lg:my-2'>Quick Access</h4>
                         <ul className='w-full list-inside pl-5 flex flex-col items-start justify-center gap-1'>
                             <li className='text-center flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <Link href={'/'} >
+                                <Link href={'/'} className='flex items-center gap-2'>
                                     <FaBolt className='group-hover:text-gold-500' />
                                     Home
                                 </Link>
                             </li>
                             <li className='text-center flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <Link href={'/about'} >
+                                <Link href={'/about'} className='flex items-center gap-2'>
                                     <FaBolt className='group-hover:text-gold-500' />
                                     About Us
                                 </Link>
                             </li>
                             <li className='text-center flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <Link href={'/gallery'} >
+                                <Link href={'/gallery'} className='flex items-center gap-2'>
                                     <FaBolt className='group-hover:text-gold-500' />
                                     Gallery
                                 </Link>
                             </li>
                             <li className='text-center flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <Link href={'/#services'} >
+                                <Link href={'/#services'} className='flex items-center gap-2'>
                                     <FaBolt className='group-hover:text-gold-500' />
                                     Services
                                 </Link>
                             </li>
                             <li className='text-center flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <Link href={'/contact'} >
+                                <Link href={'/contact'} className='flex items-center gap-2'>
                                     <FaBolt className='group-hover:text-gold-500' />
                                     Contact Us
                                 </Link>

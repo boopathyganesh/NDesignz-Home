@@ -22,7 +22,7 @@ const OurAchievements = () => {
             </div>
           </div>
           <div className='h-96 w-full overflow-hidden flex items-center' >
-            <Image src={'/images/assets/HomeBg/cover2.jpg'} width={500} height={500} alt={''} className='w-full group-hover:scale-105 md:group-hover:rotate-6 smooth' />
+            <Image src={'/images/assets/asset8.jpg'} width={500} height={500} alt={''} className='w-full group-hover:scale-105 md:group-hover:rotate-6 smooth' />
           </div>
           <div>
             <p className='text-sm md:text-base text-center'>Choosing Livstyle Homes means choosing a partner who genuinely cares about bringing your vision to life. Our team combines technical expertise with creative flair, delivering spaces that are beautiful, practical, and built to last. We take pride in our ability to translate ideas into reality, paying close attention to each client’s preferences while adding our unique touch.</p>

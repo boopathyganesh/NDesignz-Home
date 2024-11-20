@@ -19,13 +19,13 @@ const AboutUs = () => {
             <h1 className='text-2xl font-medium text-teal'>Crafting Stories Through Spaces.</h1>
             <p>Inspired by India's cultural richness, we craft designs that aren’t just beautiful but also deeply meaningful.</p>
           </div>
-          <div className='flex items-center justify-center rounded-3xl overflow-hidden'>
-            <Image src={'/images/assets/asset1.jpg'} alt={''} height={500} width={500} />
+          <div className='flex items-center justify-center rounded-3xl overflow-hidden max-h-72'>
+            <Image src={'/images/assets/asset1.jpg'} alt={''} height={500} width={500} className='hover:scale-110 smooth' />
           </div>
         </div>
         <div className='flex flex-col-reverse md:flex-row items-center justify-center gap-5'>
-          <div className='flex items-center justify-center rounded-3xl overflow-hidden'>
-            <Image src={'/images/assets/asset1.jpg'} alt={''} height={500} width={500} />
+          <div className='flex items-center justify-center rounded-3xl overflow-hidden max-h-72 '>
+            <Image src={'/images/assets/asset7.jpg'} alt={''} height={500} width={500} className='hover:scale-110 smooth' />
           </div>
           <div className='w-full md:w-1/2 flex flex-col items-center justify-center text-center gap-2'>
             <h1 className='text-2xl font-medium text-teal'>Reimagining Indian Interiors for the New Gen Home</h1>
