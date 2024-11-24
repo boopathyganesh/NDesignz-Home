@@ -1,4 +1,3 @@
-"use client"
 import OurAchievements from "@/components/OurAchievements";
 import OurExpertise from "@/components/OurExpertise";
 import OurServices from "@/components/OurServices";
@@ -8,6 +7,15 @@ import FAQ from "@/components/FAQ";
 import AboutUs from "@/components/AboutUs";
 import CreativeJourney from "@/components/CreativeJourney";
 import Connect from "@/components/Connect";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home - LivStyle Homes",
+  description: "Livstyle Homes - Your Interior Pro",
+  alternates: {
+    canonical: "https://livstylehomes.com/",
+  },
+};
 
 export default function Home() {
   return (

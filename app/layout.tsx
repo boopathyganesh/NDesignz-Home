@@ -12,16 +12,16 @@ import GAnalytics from "@/components/Analytics";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const merienda = Merienda({ subsets: ["latin"], display: "swap" });
 
-export const metadata: Metadata = {
-  title: "Livstyle Homes - Your Interior Pro",
-  description: "Livstyle Homes - Your Interior Pro",
-  openGraph: {
-    title: "LivStyle Homes",
-    description: "Modern interior design services.",
-    url: "https://livstylehomes.com/",
-    siteName: "LivStyle Homes",
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Livstyle Homes - Your Interior Pro",
+//   description: "Livstyle Homes - Your Interior Pro",
+//   openGraph: {
+//     title: "LivStyle Homes",
+//     description: "Modern interior design services.",
+//     url: "https://livstylehomes.com/",
+//     siteName: "LivStyle Homes",
+//   },
+// };
 
 export default function RootLayout({
   children,
@@ -37,7 +37,6 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Livstyle Homes" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="canonical" href="https://livstylehomes.com/" />
       </head>
       <body className={`${inter.className} bg-white`}>
         <Navbar />
