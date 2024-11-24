@@ -10,7 +10,7 @@ const Footer = () => {
             <div className='flex flex-col lg:flex-row items-center justify-between w-full py-5 md:px-5 xl:px-36 bg-black/70'>
                 <div className='flex flex-col items-center lg:items-start justify-center gap-3 w-full px-3 lg:max-w-96 text-center lg:text-left'>
                     <div className='flex items-center justify-center p-2 bg-white rounded-xl'>
-                        <Image src={'/images/Brand/brand.svg'} alt={''} height={200} width={200} />
+                        <Image src={'/images/Brand/brand.svg'} alt={'Livstyle Homes'} height={200} width={200} />
                     </div>
                     <p className='font-light text-white/90'>Livstyle Homes is a premier interior design company based in Coimbatore, specializing in creating exceptional residential and commercial spaces across Coimbatore and beyond. Our team brings a wealth of expertise and a passion for innovation, blending the latest trends with timeless design principles to craft interiors that are as functional as they are beautiful.</p>
                 </div>

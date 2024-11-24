@@ -55,7 +55,7 @@ export default function Services() {
                   <CarouselContent className='w-full'>
                     {service.images.map((item, index) => (
                       <CarouselItem key={index} className="">
-                        <Image src={item} alt={""} height={500} width={500} className="w-full p-2 rounded-3xl" />
+                        <Image src={item} alt={`CarouselItem-${index}`} height={500} width={500} className="w-full p-2 rounded-3xl" />
                       </CarouselItem>
                     ))}
                   </CarouselContent>

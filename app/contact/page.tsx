@@ -15,7 +15,7 @@ export default function Contact() {
     <main className="max-w-sm md:max-w-md lg:max-w-7xl mx-auto w-full flex flex-col items-center justify-center ">
       <section className="flex flex-col items-center justify-center mt-28 px-5">
         <div className="max-w-96 w-full flex items-center justify-center">
-          <Image src={"/images/Brand/brand.svg"} alt={""} height={500} width={500} className="w-full" />
+          <Image src={"/images/Brand/brand.svg"} alt={"Livstyle Homes"} height={500} width={500} className="w-full" />
         </div>
         <div className="text-center flex items-center justify-center">
           <p className="text-base md:text-xl font-medium">Welcome to <span className="text-teal font-medium">Livstyle Homes</span>—where dreams take shape, and spaces come alive. Based in the vibrant city of Coimbatore, <span className="text-teal font-medium">Livstyle Homes</span> is more than just an interior design company; we are creators, innovators, and visionaries dedicated to crafting exceptional spaces for our clients. From cozy homes to dynamic commercial environments, we specialize in designing interiors that are both beautiful and functional, each one carefully tailored to the unique needs and aspirations of our clients.</p>
@@ -26,7 +26,7 @@ export default function Contact() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-5">
           <div className="max-w-96 h-80 w-full flex flex-col items-center justify-start gap-4 bg-teal-200 p-3 rounded-2xl">
             <div className="w-56 h-56 flex items-center justify-center rounded-full overflow-hidden ">
-              <Image src={"/images/assets/mail.png"} alt={""} height={500} width={500} className="w-full" />
+              <Image src={"/images/assets/mail.png"} alt={"Mail"} height={500} width={500} className="w-full" />
             </div>
             <div className="text-center text-white my-3">
               <span className="font-semibold">Email: </span>
@@ -35,7 +35,7 @@ export default function Contact() {
           </div>
           <div className="max-w-96 h-80 w-full flex flex-col items-center justify-start gap-4 bg-teal-200 p-3 rounded-2xl">
             <div className="w-56 h-56 flex items-center justify-center rounded-full overflow-hidden ">
-              <Image src={"/images/assets/phone.png"} alt={""} height={500} width={500} className="w-full" />
+              <Image src={"/images/assets/phone.png"} alt={"Phone"} height={500} width={500} className="w-full" />
             </div>
             <div className="text-center text-white my-3">
               <span className="font-semibold">Contact: </span>
@@ -44,7 +44,7 @@ export default function Contact() {
           </div>
           <div className="max-w-96 h-80 w-full flex flex-col items-center justify-start gap-4 bg-teal-200 p-3 rounded-2xl">
             <div className="w-56 h-56 flex items-center justify-center rounded-full overflow-hidden ">
-              <Image src={"/images/assets/address.png"} alt={""} height={500} width={500} className="w-full" />
+              <Image src={"/images/assets/address.png"} alt={"Location"} height={500} width={500} className="w-full" />
             </div>
             <div className="text-center text-white my-3">
               <span className="font-semibold">Address: </span>
