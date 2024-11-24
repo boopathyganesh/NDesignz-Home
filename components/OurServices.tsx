@@ -10,6 +10,15 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from 'embla-carousel-autoplay'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "Services - LivStyle Homes",
+    description: "Our Valuable Services",
+    alternates: {
+      canonical: "https://livstylehomes.com/services",
+    },
+  };
 
 
 const OurServices = () => {
