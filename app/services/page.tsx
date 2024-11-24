@@ -13,6 +13,15 @@ import {
 import Autoplay from 'embla-carousel-autoplay'
 import EnquiryForm from "@/components/Forms/Enquiry";
 import * as gtag from '@/lib/gtag';
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+  title: "Our Services - LivStyle Homes",
+  description: "Our Valuable Services",
+  alternates: {
+    canonical: "https://livstylehomes.com/services",
+  },
+};
 
 export default function Services() {
   return (
