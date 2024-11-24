@@ -1,8 +1,15 @@
-"use client"
 import Connect from "@/components/Connect";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Contact - LivStyle Homes",
+  description: "Contact Us",
+  alternates: {
+    canonical: "https://livstylehomes.com/contact",
+  },
+};
 export default function Contact() {
   return (
     <main className="max-w-sm md:max-w-md lg:max-w-7xl mx-auto w-full flex flex-col items-center justify-center ">

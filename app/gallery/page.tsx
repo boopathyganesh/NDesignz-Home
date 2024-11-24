@@ -1,5 +1,13 @@
-"use client"
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Gallery - LivStyle Homes",
+  description: "Our Precious Gallery of fine Art works",
+  alternates: {
+    canonical: "https://livstylehomes.com/gallery",
+  },
+};
 
 export default function Gallery() {
   const images = [
