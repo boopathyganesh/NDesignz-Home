@@ -66,6 +66,41 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://livstylehomes.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "About",
+                  "item": "https://livstylehomes.com/about"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Contact",
+                  "item": "https://livstylehomes.com/contact"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Services",
+                  "item": "https://livstylehomes.com/services"
+                }
+              ]
+            }),
+          }}
+        />
         <ScrollToTop />
         <Toaster />
         <Footer />
