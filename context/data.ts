@@ -52,12 +52,12 @@ export const services = [
     {
         id: "office",
         title: "Office Interior",
-        image: "/images/web_asset1.jpg"
+        image: "/images/web_asset2.jpg"
     },
     {
         id: "residential",
         title: "Residential Interior",
-        image: "/images/web_asset2.jpg"
+        image: "/images/web_asset1.jpg"
     },
     {
         id: "living",
@@ -81,7 +81,7 @@ export const ServiceData = [
     {
         id: "living",
         title: "Living Room Interior Design",
-        images: ["/images/assets/asset1.jpg", "/images/assets/asset1.jpg", "/images/assets/asset1.jpg"],
+        images: ["/images/assets/3d/8.jpg", "/images/assets/3d/8.jpg", "/images/assets/3d/10.jpg"],
         description: "The living room is the heart of your home. We craft spaces that are inviting, functional, and visually stunning, ensuring your guests and family feel right at home.",
         offer: ["Customized seating and layout plans", "Accent walls and feature lighting", "Decorative and functional furniture", "Integration of traditional and modern elements"],
         why: ["A perfect balance of comfort and style", "Designs that suit your lifestyle and space needs"]
@@ -89,7 +89,7 @@ export const ServiceData = [
     {
         id: "bedroom",
         title: "Bedroom Interior Design",
-        images: ["/images/assets/asset1.jpg", "/images/assets/asset1.jpg", "/images/assets/asset1.jpg"],
+        images: ["/images/assets/3d/6.jpg","/images/assets/3d/16.jpg"],
 
         description: "Your personal sanctuary deserves a design that inspires rest and rejuvenation. From cozy vibes to luxurious aesthetics, we tailor bedrooms to your taste.",
         offer: ["Custom wardrobes and storage solutions", "Designer headboards and bedding", "Mood lighting and soundproofing", "Space-efficient layouts"],
@@ -98,7 +98,7 @@ export const ServiceData = [
     {
         id: "kitchen",
         title: "Kitchen Interior Design",
-        images: ["/images/assets/asset1.jpg", "/images/assets/asset1.jpg", "/images/assets/asset1.jpg"],
+        images: ["/images/assets/3d/13.jpg", "/images/assets/3d/3.jpg", "/images/assets/3d/7.jpg"],
         description: "The kitchen is where style meets practicality. Our designs combine ergonomic layouts with modern technology to create a space that’s both efficient and beautiful.",
         offer: ["Modular kitchen setups", "Smart storage solutions", "Premium countertop and backsplash materials", "High-quality, durable appliances integration"],
         why: ["Focus on functionality with a touch of elegance", "Easy-to-maintain materials for everyday use"]
@@ -106,7 +106,7 @@ export const ServiceData = [
     {
         id: "office",
         title: "Office Interior Design",
-        images: ["/images/assets/asset1.jpg", "/images/assets/asset1.jpg", "/images/assets/asset1.jpg"],
+        images: ["/images/assets/3d/office1.jpg","/images/assets/3d/office2.jpg"],
         description: "Whether it’s a sleek corporate space or a vibrant home office, our designs boost productivity while maintaining a professional aesthetic.",
         offer: ["Ergonomic furniture selection",
             "Smart layouts for efficient workflows",
@@ -117,7 +117,7 @@ export const ServiceData = [
     {
         id: "dining",
         title: "Dining Room Interior Design",
-        images: ["/images/assets/asset1.jpg", "/images/assets/asset1.jpg", "/images/assets/asset1.jpg"],
+        images: ["/images/assets/3d/dine1.jpg","/images/assets/3d/dine2.jpg"],
         description: "Create a dining area that’s perfect for family meals and entertaining guests. We design spaces that are functional, elegant, and warm.",
         offer: ["Custom dining tables and seating arrangements",
             "Ambient lighting for a cozy atmosphere",
@@ -128,7 +128,7 @@ export const ServiceData = [
     {
         id: "commercial",
         title: "Commercial and Retail Interior Design",
-        images: ["/images/assets/asset1.jpg", "/images/assets/asset1.jpg", "/images/assets/asset1.jpg"],
+        images: ["/images/assets/3d/commercial1.jpg","/images/assets/3d/commercial2.jpg"],
         description: "Transform your business space into a visually appealing and functional environment. From offices to retail outlets, we bring your brand to life.",
         offer: ["Brand-centric retail layouts",
             "Functional workspaces for staff and customers",
