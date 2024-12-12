@@ -1,6 +1,9 @@
+"use client"
+import ImageViewer from "@/components/ui/ImageViewer";
 import { Metadata } from "next";
 import Image from "next/image";
-export const metadata: Metadata = {
+
+const metadata: Metadata = {
   title: "Gallery - LivStyle Homes",
   description: "Our Precious Gallery of fine Art works",
   alternates: {
@@ -71,14 +74,16 @@ export default function Gallery() {
                   <div
                     key={index}
                     className={`${index % 3 === 2 ? "w-full" : "w-1/2"} flex items-center justify-center p-1 md:p-2`}
+                    onClick={() => <ImageViewer src={src} alt="gallery" />}
                   >
-                    <Image
+                    {/* <Image
                       alt="gallery"
                       className="block hover:scale-105 aspect-video smooth object-cover object-center w-full rounded-lg h-auto"
                       src={src}
                       height={1000}
                       width={1000}
-                    />
+                    /> */}
+                    <ImageViewer src={src} alt="gallery" />
                   </div>
                 ))}
             </div>
