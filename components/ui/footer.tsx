@@ -72,8 +72,13 @@ const Footer = () => {
             </div>
             <div className='max-w-full flex items-center justify-center w-full text-white border-t border-dashed border-white h-20 lg:h-14 bg-teal'>
                 <div className='max-w-sm md:max-w-4xl lg:max-w-full md:px-10 flex flex-col-reverse lg:flex-row items-center justify-between w-full text-center'>
-                    <div className='text-sm lg:text-base'>Powered by <Link href={'#'} className='text-gold-500 font-semibold'>iroX</Link></div>
-                    <div className='text-sm lg:text-base'>Copyright &copy; {new Date().getFullYear()} <span className='text-gold-400'>Livestyle Homes</span> - All Rights Reserved.</div>
+                    <div className='text-sm lg:text-base font-semibold flex items-center justify-center'>
+                        Powered by
+                        <Link href={'#'} className='text-gold-500 font-semibold'>
+                            <Image src={'/images/Brand/irox-tech.svg'} alt={''} height={150} width={150} className='w-24 mx-2' />
+                        </Link>
+                    </div>
+                    <div className='text-sm lg:text-base'>Copyright &copy; {new Date().getFullYear()} <span className='text-gold-400'>Livstyle Homes</span> - All Rights Reserved.</div>
                 </div>
             </div>
         </footer>
