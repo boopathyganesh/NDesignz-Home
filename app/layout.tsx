@@ -8,7 +8,7 @@ import { Toaster } from "@/components/ui/sonner";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
 import GAnalytics from "@/components/Analytics";
-import AuthProvider from "@/components/AuthProvider";
+// import AuthProvider from "@/components/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const merienda = Merienda({ subsets: ["latin"], display: "swap" });
@@ -40,7 +40,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${inter.className} bg-white`}>
-        <AuthProvider>
+        {/* <AuthProvider> */}
           <Navbar />
           <GAnalytics />
           <div className="min-h-screen w-full h-full">
@@ -106,7 +106,7 @@ export default function RootLayout({
           <ScrollToTop />
           <Toaster />
           <Footer />
-        </AuthProvider>
+        {/* </AuthProvider> */}
       </body>
     </html>
   );
