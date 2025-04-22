@@ -10,7 +10,7 @@ const Footer = () => {
             <div className='flex flex-col lg:flex-row items-center justify-between w-full py-5 md:px-5 xl:px-36 bg-black/70'>
                 <div className='flex flex-col items-center lg:items-start justify-center gap-3 w-full px-3 lg:max-w-96 text-center lg:text-left'>
                     <div className='flex items-center justify-center p-2 bg-white rounded-xl'>
-                        <Image src={'/images/Brand/brand.svg'} alt={'Livstyle Homes'} height={200} width={200} />
+                        <Image src={'/images/Brand/brand.svg'} alt={'Livstyle Homes'} height={200} width={200} priority />
                     </div>
                     <p className='font-light text-white/90'>Livstyle Homes is a premier interior design company based in Coimbatore, specializing in creating exceptional residential and commercial spaces across Coimbatore and beyond. Our team brings a wealth of expertise and a passion for innovation, blending the latest trends with timeless design principles to craft interiors that are as functional as they are beautiful.</p>
                 </div>
@@ -70,12 +70,11 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='max-w-full flex items-center justify-center w-full text-white border-t border-dashed border-white h-20 lg:h-14 bg-teal'>
-                <div className='max-w-sm md:max-w-4xl lg:max-w-full md:px-10 flex flex-col-reverse lg:flex-row items-center justify-between w-full text-center'>
+            <div className='max-w-full flex items-center justify-center w-full text-white border-t border-dashed border-white h-24 lg:h-14 bg-teal'>
+                <div className='max-w-sm md:max-w-4xl lg:max-w-full md:px-10 flex flex-col-reverse lg:flex-row items-center justify-between w-full text-center gap-1.5'>
                     <div className='text-sm lg:text-base font-semibold flex items-center justify-center'>
-                        Powered by
-                        <Link href={'#'} className='text-gold-500 font-semibold'>
-                            <Image src={'/images/Brand/irox-tech.svg'} alt={''} height={150} width={150} className='w-24 mx-2' />
+                        <Link href={'#'} className='text-gold-500 font-semibold bg-white rounded-lg'>
+                            <Image src={'/images/Brand/powered-by-IE.svg'} alt={''} height={150} width={150} className='w-24 mx-2' priority />
                         </Link>
                     </div>
                     <div className='text-sm lg:text-base'>Copyright &copy; {new Date().getFullYear()} <span className='text-gold-400'>Livstyle Homes</span> - All Rights Reserved.</div>

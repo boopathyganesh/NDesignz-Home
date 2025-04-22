@@ -67,6 +67,7 @@ const ImageViewer = ({ src, alt }: ViewerProps) => {
                 onClick={openViewer}
                 height={1000}
                 width={1000}
+                priority
             />
 
             {/* Fullscreen Viewer */}
@@ -91,6 +92,7 @@ const ImageViewer = ({ src, alt }: ViewerProps) => {
                             }}
                             height={1000}
                             width={1000}
+                            priority
                         />
                         <button
                             className={`transform translate(${position.x}px, ${position.y}px) absolute top-4 right-4 h-10 w-10 text-white bg-teal rounded-full hover:bg-teal-500 text-2xl flex items-center justify-center`}

@@ -60,7 +60,7 @@ const Hero = () => {
   }
 
   return (
-    <section className='max-w-sm md:max-w-4xl lg:max-w-full h-[370px] mt-20 md:mt-32 lg:mt-0 lg:h-[750px] w-full flex items-center justify-center gap-4 bg-white/10 bg-center bg-cover bg-opacity-15 overflow-hidden'>
+    <section className='max-w-sm md:max-w-4xl lg:max-w-full h-[370px] mt-5 md:mt-32 lg:mt-0 lg:h-[750px] w-full flex items-center justify-center gap-4 bg-white/10 bg-center bg-cover bg-opacity-15 overflow-hidden'>
       <div className='w-full h-full flex items-center justify-center relative'>
         <Carousel opts={{ loop: true, dragFree: true }} plugins={[
           Autoplay({ delay: 4000 })
@@ -68,7 +68,8 @@ const Hero = () => {
           <CarouselContent className='max-w-full w-full m-0'>
             {HomeBg.map((hero, index) => (
               <CarouselItem key={index} className='w-full flex items-center justify-center p-0 relative'>
-                <Image src={hero.Image} alt={'Banner Image'} width={1000} height={1000} className='w-full h-auto' />
+                <div className='w-[1000px] h-[500px] bg-cover bg-center' style={{ backgroundImage: `url(${hero.Image})` }}></div>
+                {/* <Image src={hero.Image} alt={'Banner Image'} width={1000} height={1000} className='w-full h-auto' /> */}
                 <div className='bg-black/40 absolute top-0 h-full w-full'></div>
               </CarouselItem>
             ))}
@@ -76,7 +77,7 @@ const Hero = () => {
           <CarouselPrevious className='text-white bg-teal border-none hidden md:flex absolute left-5 lg:left-10' />
           <CarouselNext className='text-white bg-teal border-none hidden md:flex absolute right-5 lg:right-10' />
         </Carousel>
-        <div className='absolute top-[35%] lg:top-[40%] left-[50%] -translate-x-[50%] transform w-full lg:w-max flex flex-col items-center justify-center gap-5 p-5 lg:rounded-2xl lg:bg-black/50'>
+        <div className='absolute top-[25%] lg:top-[40%] left-[50%] -translate-x-[50%] transform w-full lg:w-max flex flex-col items-center justify-center gap-5 p-5 lg:rounded-2xl lg:bg-black/50'>
           <div className='flex flex-col items-center justify-center text-center'>
             <h1 className='text-white text-xl lg:text-2xl xl:text-4xl leading-tight font-medium'>Unveil the Art of Indian Elegance - Interiors That Speak to the Soul</h1>
             <p className='text-white/90 mt-3 max-w-xl text-base lg:text-xl'>Making your home so beautiful, you'll never want to leave</p>

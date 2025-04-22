@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/sonner";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
 import GAnalytics from "@/components/Analytics";
+import AuthProvider from "@/components/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const merienda = Merienda({ subsets: ["latin"], display: "swap" });
@@ -39,24 +40,25 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${inter.className} bg-white`}>
-        <Navbar />
-        <GAnalytics />
-        <div className="min-h-screen w-full h-full">
-          {children}
-        </div>
-        {/* {process.env.NODE_ENV === 'production' && (
+        <AuthProvider>
+          <Navbar />
+          <GAnalytics />
+          <div className="min-h-screen w-full h-full">
+            {children}
+          </div>
+          {/* {process.env.NODE_ENV === 'production' && (
           <GoogleAnalytics trackingId="G-LN82J7GXJJ" />
         )} */}
-        {/* Google Analytics */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
+          {/* Google Analytics */}
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script
+            id="google-analytics"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
@@ -64,46 +66,47 @@ export default function RootLayout({
                 page_path: window.location.pathname,
               });
             `,
-          }}
-        />
-        <Script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://livstylehomes.com/"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "About",
-                  "item": "https://livstylehomes.com/about"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Contact",
-                  "item": "https://livstylehomes.com/contact"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 4,
-                  "name": "Services",
-                  "item": "https://livstylehomes.com/services"
-                }
-              ]
-            }),
-          }}
-        />
-        <ScrollToTop />
-        <Toaster />
-        <Footer />
+            }}
+          />
+          <Script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://livstylehomes.com/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "About",
+                    "item": "https://livstylehomes.com/about"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Contact",
+                    "item": "https://livstylehomes.com/contact"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Services",
+                    "item": "https://livstylehomes.com/services"
+                  }
+                ]
+              }),
+            }}
+          />
+          <ScrollToTop />
+          <Toaster />
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

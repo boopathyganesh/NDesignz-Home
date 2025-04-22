@@ -14,7 +14,7 @@ export default function Home() {
     <main className="max-w-sm md:max-w-3xl lg:max-w-7xl mx-auto w-full flex flex-col items-center justify-center px-5 xl:px-0">
       <section className="flex flex-col items-center justify-center mt-28">
         <div className="max-w-96 w-full flex items-center justify-center">
-          <Image src={"/images/Brand/brand.svg"} alt={"Livstyle Homes"} height={500} width={500} className="w-full" />
+          <Image src={"/images/Brand/brand.svg"} alt={"Livstyle Homes"} height={500} width={500} className="w-full" priority />
         </div>
         <div className="text-center flex items-center justify-center">
           <p className="text-xl font-medium">Welcome to <span className="text-teal font-medium">Livstyle Homes</span>—where dreams take shape, and spaces come alive. Based in the vibrant city of Coimbatore, <span className="text-teal font-medium">Livstyle Homes</span> is more than just an interior design company; we are creators, innovators, and visionaries dedicated to crafting exceptional spaces for our clients. From cozy homes to dynamic commercial environments, we specialize in designing interiors that are both beautiful and functional, each one carefully tailored to the unique needs and aspirations of our clients.</p>

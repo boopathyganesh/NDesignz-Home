@@ -29,7 +29,7 @@ export default function Services() {
       <h1 className="text-3xl md:text-4xl font-bold text-teal-700">Services We Offer</h1>
       <section className="flex flex-col items-center justify-center w-full my-5 text-center gap-5 px-4">
         <div className="flex items-center justify-center w-64">
-          <Image src={"/images/Brand/brand.svg"} alt={"Livstyle Homes Logo"} height={500} width={500} className="w-full" />
+          <Image src={"/images/Brand/brand.svg"} alt={"Livstyle Homes Logo"} height={500} width={500} className="w-full" priority />
         </div>
         <h1 className="text-xl md:text-2xl font-semibold text-teal-700">Bringing Your Dream Spaces to Life</h1>
         <p className="font-medium md:text-lg">At Livstyle Homes, we specialize in creating stunning interiors and exteriors that blend functionality, aesthetics, and modern Indian sensibilities. Our diverse range of services caters to residential, commercial, and outdoor spaces, ensuring that every corner of your dream space reflects your unique personality and style.</p>
@@ -64,7 +64,7 @@ export default function Services() {
                   <CarouselContent className='w-full'>
                     {service.images.map((item, index) => (
                       <CarouselItem key={index} className="">
-                        <Image src={item} alt={`CarouselItem-${index}`} height={500} width={500} className="w-full p-2 rounded-3xl" />
+                        <Image src={item} alt={`CarouselItem-${index}`} height={500} width={500} className="w-full p-2 rounded-3xl" priority />
                       </CarouselItem>
                     ))}
                   </CarouselContent>

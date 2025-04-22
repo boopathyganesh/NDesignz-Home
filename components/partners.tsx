@@ -18,7 +18,7 @@ const Partners = () => {
                 <Marquee speed={30} loop={0} autoFill gradient gradientColor='#b1efef' gradientWidth={spread} className='bg-white h-24 overflow-hidden filter bg-blend-color-burn'>
                     {brands.map((item, index) => (
                         <div key={index} className='flex items-center justify-center w-32 ml-24 overflow-hidden'>
-                            <Image src={item.image} alt={item.brand} height={500} width={500} className='w-32 partner-img' />
+                            <Image src={item.image} alt={item.brand} height={500} width={500} className='w-32 partner-img' priority />
                         </div>
                     ))}
                 </Marquee>

@@ -57,9 +57,9 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`fixed top-3 left-[50%] transform -translate-x-[50%] max-w-sm md:max-w-4xl lg:max-w-7xl w-full flex items-center justify-between px-8 md:px-20 py-3 h-28 ${bgColor} rounded-3xl smooth`} style={{ zIndex: 99999 }}>
+        <div className={`relative md:fixed top-3 left-[50%] transform -translate-x-[50%] max-w-sm md:max-w-4xl lg:max-w-7xl w-full flex items-center justify-between px-8 md:px-20 py-3 h-28 ${bgColor} rounded-3xl smooth`} style={{ zIndex: 99999 }}>
             <Link href={''} className='h-32 w-28 md:w-40 flex items-center justify-center'>
-                <Image src={Brand} alt={'Livstyle Homes'} className='w-full h-auto' />
+                <Image src={Brand} alt={'Livstyle Homes'} className='w-full h-auto' priority />
             </Link>
             <nav className='hidden lg:flex w-1/2'>
                 <ul className='list-none w-full flex items-center justify-between text-teal-600 font-medium text-lg'>
