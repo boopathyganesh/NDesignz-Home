@@ -68,7 +68,7 @@ const Hero = () => {
           <CarouselContent className='max-w-full w-full m-0'>
             {HomeBg.map((hero, index) => (
               <CarouselItem key={index} className='w-full flex items-center justify-center p-0 relative'>
-                <div className='max-w-sm md:max-w-3xl lg:max-w-5xl xl:max-w-8xl w-[5000px] h-[900px] bg-cover bg-center' style={{ backgroundImage: `url(${hero.Image})` }}></div>
+                <div className='max-w-sm md:max-w-3xl lg:max-w-5xl xl:max-w-9xl w-[5000px] h-[900px] bg-cover bg-center' style={{ backgroundImage: `url(${hero.Image})` }}></div>
                 {/* <Image src={hero.Image} alt={'Banner Image'} width={1000} height={1000} className='w-full h-auto' /> */}
                 <div className='bg-black/40 absolute top-0 h-full w-full'></div>
               </CarouselItem>

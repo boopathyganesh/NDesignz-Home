@@ -121,7 +121,8 @@ const config = {
         '98': '.98'
       },
       maxWidth: {
-        '8xl': '100rem'
+        '8xl': '100rem',
+        '9xl': '120rem'
       },
       zIndex: {
         '-z-100': '-100'
