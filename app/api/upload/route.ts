@@ -10,7 +10,7 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: "No file uploaded" }, { status: 400 });
         }
 
-        if (!process.env.NEXT_PUBLIC_CLOUDINARY_NAME) {
+        if (!process.env.CLOUDINARY_NAME) {
             return NextResponse.json({ error: "ENV Var error: Cloudinary name" }, { status: 404 });
         }
 
@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 
         // Upload to Cloudinary
         const cloudinaryRes = await fetch(
-            `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_NAME}/image/upload`,
+            `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_NAME}/image/upload`,
             {
                 method: "POST",
                 body: formData,

@@ -8,9 +8,9 @@ export async function GET(req: Request) {
         return NextResponse.json({ error: "Folder name is required" }, { status: 400 });
     }
 
-    const CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_NAME;
-    const API_KEY = process.env.NEXT_PUBLIC_CLOUDINARY_KEY;
-    const API_SECRET = process.env.NEXT_PUBLIC_CLOUDINARY_SECRET;
+    const CLOUD_NAME = process.env.CLOUDINARY_NAME;
+    const API_KEY = process.env.CLOUDINARY_KEY;
+    const API_SECRET = process.env.CLOUDINARY_SECRET;
 
     const url = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/resources/image/upload?prefix=${folder}`;
 
