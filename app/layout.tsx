@@ -41,7 +41,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-white`}>
         <AuthProvider>
-          <Navbar />
+          {/* <Navbar /> */}
           <GAnalytics />
           <div className="min-h-screen w-full h-full">
             {children}
@@ -103,9 +103,9 @@ export default function RootLayout({
               }),
             }}
           />
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <Toaster />
-          <Footer />
+          {/* <Footer /> */}
         </AuthProvider>
       </body>
     </html>
