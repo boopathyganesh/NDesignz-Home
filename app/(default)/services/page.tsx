@@ -16,8 +16,8 @@ import * as gtag from '@/lib/gtag';
 import { Metadata } from "next";
 
 const metadata: Metadata = {
-  title: "Our Services - LivStyle Homes",
-  description: "Our Valuable Services",
+  title: "Interior Design Services in Coimbatore | LivStyle Homes – Residential & Commercial",
+  description: "Transform your space with LivStyle Homes, the leading interior designers in Coimbatore. Offering expert residential, office, and commercial designs in Saravanampatty, RS Puram, and more. Get a free consultation today!",
   alternates: {
     canonical: "https://livstylehomes.com/services",
   },

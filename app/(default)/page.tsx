@@ -10,8 +10,8 @@ import Connect from "@/components/Connect";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home - LivStyle Homes",
-  description: "Livstyle Homes - Your Interior Pro",
+  title: "Interior Design Services in Coimbatore | LivStyle Homes – Transform Your Space Today",
+  description: "Looking for the best interior design services in Coimbatore? LivStyle Homes offers personalised, stylish home and office designs in Saravanampatty, RS Puram, and beyond. Contact us now for a free consultation!",
   alternates: {
     canonical: "https://livstylehomes.com/",
   },

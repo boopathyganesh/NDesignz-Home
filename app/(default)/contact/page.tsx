@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact - LivStyle Homes",
-  description: "Contact Us",
+  title: "Contact LivStyle Homes | Interior Design Experts in Coimbatore",
+  description: "Get in touch with LivStyle Homes, the best interior designers in Coimbatore. We offer personalized design services for homes and offices in Saravanampatty, RS Puram, and surrounding areas. Call today!",
   alternates: {
     canonical: "https://livstylehomes.com/contact",
   },

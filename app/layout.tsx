@@ -90,12 +90,18 @@ export default function RootLayout({
                   {
                     "@type": "ListItem",
                     "position": 3,
+                    "name": "Our Gallery",
+                    "item": "https://livstylehomes.com/gallery"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
                     "name": "Contact",
                     "item": "https://livstylehomes.com/contact"
                   },
                   {
                     "@type": "ListItem",
-                    "position": 4,
+                    "position": 5,
                     "name": "Services",
                     "item": "https://livstylehomes.com/services"
                   }

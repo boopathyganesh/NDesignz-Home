@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 const metadata: Metadata = {
-  title: "Gallery - LivStyle Homes",
-  description: "Our Precious Gallery of fine Art works",
+  title: "Interior Design Portfolio | LivStyle Homes – Stunning Projects in Coimbatore",
+  description: "Explore LivStyle Homes’ interior design portfolio in Coimbatore. From residential homes to commercial spaces, see how we’ve transformed spaces in Saravanampatty, Sulur, and surrounding areas.",
   alternates: {
     canonical: "https://livstylehomes.com/gallery",
   },
