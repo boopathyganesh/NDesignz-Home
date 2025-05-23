@@ -68,7 +68,7 @@ export default function RootLayout({
             `,
             }}
           />
-          <Script
+          {/* <Script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
@@ -108,7 +108,7 @@ export default function RootLayout({
                 ]
               }),
             }}
-          />
+          /> */}
           {/* <ScrollToTop /> */}
           <Toaster />
           {/* <Footer /> */}
