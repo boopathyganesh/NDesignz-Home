@@ -9,6 +9,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
 import GAnalytics from "@/components/Analytics";
 import AuthProvider from "@/components/AuthProvider";
+import WhatsappButton from "@/components/WhatsappWidget";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const merienda = Merienda({ subsets: ["latin"], display: "swap" });
@@ -50,6 +51,7 @@ export default function RootLayout({
           <GoogleAnalytics trackingId="G-LN82J7GXJJ" />
         )} */}
           {/* Google Analytics */}
+          <WhatsappButton />
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
             strategy="afterInteractive"
