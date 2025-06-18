@@ -14,7 +14,7 @@ export default function RootLayout({
             <div className="min-h-screen w-full h-full">
                 {children}
             </div>
-            <ScrollToTop />
+            {/* <ScrollToTop /> */}
             <Footer />
         </main>
     );

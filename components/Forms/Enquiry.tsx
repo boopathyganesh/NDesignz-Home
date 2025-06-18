@@ -18,6 +18,7 @@ import { useState } from "react";
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import PhoneInput from "../ui/PhoneInput";
 import axios, { AxiosResponse } from "axios";
+import * as gtag from '@/lib/gtag';
 
 const enquirySchema = z.object({
     name: z.string().min(1, { message: "Name is required" }),
@@ -29,10 +30,8 @@ const enquirySchema = z.object({
 });
 
 type EnquiryFormInputs = z.infer<typeof enquirySchema>;
-interface EnquireProps {
-    onSuccessSubmit: () => void;
-}
-export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
+
+export default function EnquiryForm() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -80,7 +79,13 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
             if (response) {
                 //setIsOpen(true)
                 form.reset()
-                onSuccessSubmit();
+                //onSuccessSubmit();
+                gtag.event({
+                    action: 'click_button',
+                    category: 'Button',
+                    label: 'Subscribe Now',
+                    value: 1,
+                });
             }
         } catch (err) {
             console.error("Form submission error:", err);

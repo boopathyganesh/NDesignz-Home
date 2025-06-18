@@ -53,18 +53,18 @@ const Footer = () => {
                     </div>
                     <div className='flex flex-col items-center lg:items-start justify-center text-start lg:max-w-[500px] w-full'>
                         <h4 className='font-medium lg:mb-3 my-3 lg:my-0'>Contact Information</h4>
-                        <ul className='w-full list-inside pl-5 flex flex-col items-start justify-center gap-3'>
-                            <li className='flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <FaPhone className='group-hover:text-gold-500 text-xl' />
-                                Phone: +91 8610933642
+                        <ul className='w-full list-inside pl-3 flex flex-col items-start justify-start gap-3'>
+                            <li className='w-full flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
+                                <FaPhone className='group-hover:text-gold-500 text-xl w-10' />
+                                <p className='w-full'>Phone: +91 8610933642</p>
                             </li>
-                            <li className='flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <FaMailBulk className='group-hover:text-gold-500 text-xl' />
-                                Email: livstylehomescbe@gmail.com
+                            <li className='w-full flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
+                                <FaMailBulk className='group-hover:text-gold-500 text-xl w-10' />
+                                <p className='w-full'>Email: livstylehomescbe@gmail.com</p>
                             </li>
-                            <li className='flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
-                                <FaAddressBook className='group-hover:text-gold-500 text-xl' />
-                                Address : 1/291, Ramasamy Gounder Street, Near RV Hospital, Chinniyampalayam, 641062
+                            <li className='w-full flex items-center justify-start gap-2.5 group hover:font-medium hover:scale-105'>
+                                <FaAddressBook className='group-hover:text-gold-500 text-xl w-10' />
+                                <p className='w-full'>Address : 1/291, Ramasamy Gounder Street, Near RV Hospital, Chinniyampalayam, 641062</p>
                             </li>
                         </ul>
                     </div>
