@@ -31,7 +31,7 @@ const enquirySchema = z.object({
 
 type EnquiryFormInputs = z.infer<typeof enquirySchema>;
 interface EnquireProps {
-    onSuccessSubmit ?: () => void;
+    onSuccessSubmit?: () => void;
 }
 export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
     const [loading, setLoading] = useState(false);
@@ -81,7 +81,9 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
             if (response) {
                 //setIsOpen(true)
                 form.reset()
-                //onSuccessSubmit();
+                if (onSuccessSubmit) {
+                    onSuccessSubmit();
+                }
                 gtag.event({
                     action: 'click_button',
                     category: 'Button',
