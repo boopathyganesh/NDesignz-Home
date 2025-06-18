@@ -30,8 +30,10 @@ const enquirySchema = z.object({
 });
 
 type EnquiryFormInputs = z.infer<typeof enquirySchema>;
-
-export default function EnquiryForm() {
+interface EnquireProps {
+    onSuccessSubmit ?: () => void;
+}
+export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
