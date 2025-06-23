@@ -56,7 +56,7 @@ const ServiceCards = ({ img, title, description, feat }: CardProps) => {
             <div className='w-1/2 h-full flex items-center justify-center overflow-hidden bg-gray-300' >
                 <Image src={img} alt={title} height={800} width={800} className='aspect-square hover:scale-110 smooth' />
             </div>
-            <div className='relative w-1/2 h-full flex flex-col items-start justify-start px-2.5 py-3'>
+            <div className='relative w-1/2 h-full flex flex-col items-start justify-start px-2.5 py-5 gap-1'>
                 <h4 className='text-[1.6rem] font-bold'>{title}</h4>
                 <p className='text-sm text-balance'>{description}</p>
 
