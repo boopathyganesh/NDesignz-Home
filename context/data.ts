@@ -80,7 +80,7 @@ export const services = [
 export const ServiceData = [
     {
         id: "living",
-        title: "Living Room Interior Design",
+        title: "Living Room Design",
         images: ["/images/assets/3d/8.jpg", "/images/assets/3d/8.jpg", "/images/assets/3d/10.jpg"],
         description: "The living room is the heart of your home. We craft spaces that are inviting, functional, and visually stunning, ensuring your guests and family feel right at home.",
         offer: ["Customized seating and layout plans", "Accent walls and feature lighting", "Decorative and functional furniture", "Integration of traditional and modern elements"],
@@ -88,7 +88,7 @@ export const ServiceData = [
     },
     {
         id: "bedroom",
-        title: "Bedroom Interior Design",
+        title: "Bedroom Design",
         images: ["/images/assets/3d/6.jpg","/images/assets/3d/16.jpg"],
 
         description: "Your personal sanctuary deserves a design that inspires rest and rejuvenation. From cozy vibes to luxurious aesthetics, we tailor bedrooms to your taste.",
@@ -97,7 +97,7 @@ export const ServiceData = [
     },
     {
         id: "kitchen",
-        title: "Kitchen Interior Design",
+        title: "Kitchen Design",
         images: ["/images/assets/3d/13.jpg", "/images/assets/3d/3.jpg", "/images/assets/3d/7.jpg"],
         description: "The kitchen is where style meets practicality. Our designs combine ergonomic layouts with modern technology to create a space that’s both efficient and beautiful.",
         offer: ["Modular kitchen setups", "Smart storage solutions", "Premium countertop and backsplash materials", "High-quality, durable appliances integration"],
@@ -105,7 +105,7 @@ export const ServiceData = [
     },
     {
         id: "office",
-        title: "Office Interior Design",
+        title: "Office Design",
         images: ["/images/assets/3d/office1.jpg","/images/assets/3d/office2.jpg"],
         description: "Whether it’s a sleek corporate space or a vibrant home office, our designs boost productivity while maintaining a professional aesthetic.",
         offer: ["Ergonomic furniture selection",
@@ -116,7 +116,7 @@ export const ServiceData = [
     },
     {
         id: "dining",
-        title: "Dining Room Interior Design",
+        title: "Dining Room Design",
         images: ["/images/assets/3d/dine1.jpg","/images/assets/3d/dine2.jpg"],
         description: "Create a dining area that’s perfect for family meals and entertaining guests. We design spaces that are functional, elegant, and warm.",
         offer: ["Custom dining tables and seating arrangements",
@@ -127,7 +127,7 @@ export const ServiceData = [
     },
     {
         id: "commercial",
-        title: "Commercial and Retail Interior Design",
+        title: "Commercial Design",
         images: ["/images/assets/3d/commercial1.jpg","/images/assets/3d/commercial2.jpg"],
         description: "Transform your business space into a visually appealing and functional environment. From offices to retail outlets, we bring your brand to life.",
         offer: ["Brand-centric retail layouts",
