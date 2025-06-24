@@ -59,12 +59,22 @@ const GalleryComponent = () => {
   // ✅ Construct full image URLs
   const images = fileNames.map((file) => `/images/assets/imgs/${tag}/${file}`);
 
-  //console.log(images);
+  //console.log(images); 
 
+  const label = {
+    "bed": "Bed Room",
+    "living": "Living Room",
+    "office": "Office Room",
+    "kitchen": "Kitchen",
+    "dining": "Dining Room",
+    "commercial": "Commercial"
+  }
+
+  const labelMap = label as Record<string, string>
 
   return (
     <div className='w-full flex flex-col items-center justify-center'>
-      <div className='flex flex-wrap items-center justify-center my-10 max-w-6xl gap-5'>
+      <div className='flex flex-wrap items-center justify-center my-10 max-w-7xl gap-5'>
         <div onClick={() => setTag("living")} className='relative group cursor-pointer flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
           <Image src={'/images/assets/imgs/living.jpg'} alt={''} height={300} width={300} className='h-full' />
           <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "living" ? "bg-black/50 backdrop-blur-sm" : ""} w-full h-full flex items-center justify-center`}>Living Room</h3>
@@ -79,16 +89,19 @@ const GalleryComponent = () => {
         </div>
         <div onClick={() => setTag("dining")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
           <Image src={'/images/assets/imgs/dining.jpg'} alt={''} height={300} width={300} className='h-full' />
-          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "dining" ? "bg-black/50 backdrop-blur-sm":""} w-full h-full flex items-center justify-center`}>Dining</h3>
+          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "dining" ? "bg-black/50 backdrop-blur-sm" : ""} w-full h-full flex items-center justify-center`}>Dining</h3>
         </div>
         <div onClick={() => setTag("office")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
           <Image src={'/images/assets/imgs/office.jpg'} alt={''} height={300} width={300} className='h-full' />
-          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "office" ? "bg-black/50 backdrop-blur-sm":""} w-full h-full flex items-center justify-center`}>Office</h3>
+          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "office" ? "bg-black/50 backdrop-blur-sm" : ""} w-full h-full flex items-center justify-center`}>Office</h3>
         </div>
         <div onClick={() => setTag("commercial")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
           <Image src={'/images/assets/imgs/commercial.jpg'} alt={''} height={300} width={300} className='h-full' />
-          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "commercial" ? "bg-black/50 backdrop-blur-sm":""} w-full h-full flex items-center justify-center`}>Commercial</h3>
+          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "commercial" ? "bg-black/50 backdrop-blur-sm" : ""} w-full h-full flex items-center justify-center`}>Commercial</h3>
         </div>
+      </div>
+      <div className='flex items-center justify-center my-5 text-center'>
+        <h3 className='text-lg md:text-3xl text-teal font-semibold'>Our {labelMap[tag]} Designs</h3>
       </div>
       <div className="flex flex-wrap -m-1 md:-m-2">
         {images.length > 0 ? (
