@@ -119,7 +119,7 @@ const Navbar = () => {
                             <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/gallery'}>Gallery</Link>
                         </li>
                         <li>
-                            <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/#services'}>Services</Link>
+                            <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/services'}>Services</Link>
                         </li>
                         <li>
                             <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/about'}>About Us</Link>

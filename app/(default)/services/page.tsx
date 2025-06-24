@@ -8,6 +8,7 @@ import { FaArrowDown, FaCalendarDays, FaEnvelope, FaPhone } from "react-icons/fa
 import { ServiceData } from "@/context/data";
 import ServiceCards from "@/components/ServiceCards";
 import Achievements from "@/components/Achievements";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Interior Design Services in Coimbatore | LivStyle Homes – Residential & Commercial",
@@ -42,26 +43,26 @@ export default function Services() {
     // </main>
     <main className="flex flex-col items-center justify-center max-w-7xl mx-auto w-full overflow-hidden">
       <section className="flex flex-col items-center justify-center max-w-2xl text-center gap-3 min-h-screen">
-        <h1 className="text-6xl font-bold leading-none">Interior Design Services</h1>
-        <p className="text-gray-800 text-lg">Creating stunning interiors that blend functionality, aesthetics, and modern sensibles. From residential to commercial spaces, we bring your vision to life.</p>
+        <h1 className="text-3xl md:text-6xl font-bold leading-none text-teal">Interior Design Services</h1>
+        <p className="text-gray-800 text-sm md:text-lg">Creating stunning interiors that blend functionality, aesthetics, and modern sensibles. From residential to commercial spaces, we bring your vision to life.</p>
         <div className="w-full flex items-center justify-center gap-5">
           <Button className="bg-black">Explore Services</Button>
           <Button>Free Consultation</Button>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-center gap-3 text-gray-700 group hover:text-teal-600 smooth">
+        <Link href={"#services"} className="mt-14 flex flex-col items-center justify-center gap-3 text-gray-700 group hover:text-teal-600 smooth">
           <span className="text-sm">Discover Our Services</span>
-          <FaArrowDown className="group-hover:animate-bounce" />
-        </div>
+          <FaArrowDown className="animate-bounce" />
+        </Link>
       </section>
 
-      <section className="flex flex-col items-center justify-center gap-5">
-        <div className="flex flex-col items-center justify-center max-w-3xl gap-5 text-center">
-          <h2 className="text-5xl font-bold leading-none">Our Signature Services</h2>
-          <p className="text-gray-800 text-lg">From the concept to completion, we deliver exceptional interior design solutions tailored to your unique needs and lifestyle.</p>
+      <section id="services" className="flex flex-col items-center justify-center gap-5">
+        <div className="flex flex-col items-center justify-center max-w-xs md:max-w-3xl gap-5 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold leading-none text-teal">Our Signature Services</h2>
+          <p className="text-gray-800 text-sm md:text-lg">From the concept to completion, we deliver exceptional interior design solutions tailored to your unique needs and lifestyle.</p>
         </div>
 
-        <div className="flex items-center justify-center flex-wrap gap-5 mb-10">
+        <div className="flex items-center justify-center flex-wrap gap-5 mb-10 p-2">
           {ServiceData.map((service, index) => (
             <ServiceCards key={index} img={service.images[0]} title={service.title} description={service.description} feat={service.offer} />
           ))}
@@ -70,39 +71,39 @@ export default function Services() {
 
       <Achievements />
 
-      <section className="flex items-center justify-center gap-5 w-full mb-5">
-        <div className="w-1/2 flex flex-col items-start justify-center gap-2">
-          <h2 className="text-4xl font-bold leading-tight">Ready to Transform Your Space?</h2>
-          <p className="text-gray-700 text-lg">Let's bring your vision to life. Our expert team is ready to create something beautiful together.</p>
+      <section className="flex flex-col lg:flex-row items-center justify-center gap-5 w-full mb-5 p-3">
+        <div className="w-full lg:w-1/2 flex flex-col items-start justify-center gap-2 px-4 p-2">
+          <h2 className="text-xl md:text-4xl font-bold leading-tight text-teal">Ready to Transform Your Space?</h2>
+          <p className="text-gray-700 text-xs md:text-lg">Let's bring your vision to life. Our expert team is ready to create something beautiful together.</p>
           <ul className="list-inside">
             <li className="indent-8 relative flex flex-col items-start justify-center">
-              <span className="text-lg font-semibold">Free Consultation</span>
-              <span className="text-gray-700">Get expert advice and project assessment at no cost</span>
+              <span className="text-sm md:text-lg font-semibold">Free Consultation</span>
+              <span className="text-gray-700 text-xs md:text-base">Get expert advice and project assessment at no cost</span>
               <span className="bg-black rounded-full w-3 h-3 absolute transform top-1.5 left-1.5"></span>
             </li>
             <li className="indent-8 relative flex flex-col items-start justify-center my-3">
-              <span className="text-lg font-semibold">Personalized Design</span>
-              <span className="text-gray-700">Tailored solutions that reflect your unique style</span>
+              <span className="text-sm md:text-lg font-semibold">Personalized Design</span>
+              <span className="text-gray-700 text-xs md:text-base">Tailored solutions that reflect your unique style</span>
               <span className="bg-black rounded-full w-3 h-3 absolute transform top-1.5 left-1.5"></span>
             </li>
             <li className="indent-8 relative flex flex-col items-start justify-center">
-              <span className="text-lg font-semibold">Full Project Management</span>
-              <span className="text-gray-700">End-to-end service from concept to completion</span>
+              <span className="text-sm md:text-lg font-semibold">Full Project Management</span>
+              <span className="text-gray-700 text-xs md:text-base">End-to-end service from concept to completion</span>
               <span className="bg-black rounded-full w-3 h-3 absolute transform top-1.5 left-1.5"></span>
             </li>
           </ul>
-          <div className="flex items-center justify-start w-full gap-5 my-8">
+          <div className="flex flex-col md:flex-row items-center justify-start w-full gap-3 md:gap-5 my-8">
             <div className="flex items-center justify-center gap-2">
-              <FaPhone className="text-teal-600 text-xl" />
+              <FaPhone className="text-teal-600 text-lg md:text-xl" />
               <span>+91 8610933642</span>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <FaEnvelope className="text-teal-600 text-xl" />
+              <FaEnvelope className="text-teal-600 text-lg md:text-xl" />
               <span>livstylehomescbe@gmail.com</span>
             </div>
           </div>
         </div>
-        <div className="w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center p-2">
           <EnquiryForm />
         </div>
       </section>

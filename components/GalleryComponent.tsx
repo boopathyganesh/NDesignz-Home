@@ -64,30 +64,30 @@ const GalleryComponent = () => {
 
   return (
     <div className='w-full flex flex-col items-center justify-center'>
-      <div className='flex items-center justify-center my-10 max-w-6xl gap-5'>
-        <div onClick={() => setTag("living")} className='relative group cursor-pointer flex flex-col items-center justify-center rounded-full overflow-hidden w-44 h-44 border-2 border-white'>
-          <Image src={'/images/assets/imgs/17.jpg'} alt={''} height={300} width={300} className='h-full' />
-          <h3 className='absolute text-white text-xl font-medium group-hover:bg-white/10 group-hover:backdrop-blur-xl w-full h-full flex items-center justify-center'>Living Room</h3>
+      <div className='flex flex-wrap items-center justify-center my-10 max-w-6xl gap-5'>
+        <div onClick={() => setTag("living")} className='relative group cursor-pointer flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
+          <Image src={'/images/assets/imgs/living.jpg'} alt={''} height={300} width={300} className='h-full' />
+          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "living" ? "bg-black/50 backdrop-blur-sm" : ""} w-full h-full flex items-center justify-center`}>Living Room</h3>
         </div>
-        <div onClick={() => setTag("bed")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-44 h-44 border-2 border-white'>
-          <Image src={'/images/assets/imgs/17.jpg'} alt={''} height={300} width={300} className='h-full' />
-          <h3 className='absolute text-white text-xl font-medium group-hover:bg-white/10 group-hover:backdrop-blur-xl w-full h-full flex items-center justify-center'>Bed Room</h3>
+        <div onClick={() => setTag("bed")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
+          <Image src={'/images/assets/imgs/bed.jpg'} alt={''} height={300} width={300} className='h-full' />
+          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "bed" ? "bg-black/50 backdrop-blur-sm" : ""} w-full h-full flex items-center justify-center`}>Bed Room</h3>
         </div>
-        <div onClick={() => setTag("kitchen")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-44 h-44 border-2 border-white'>
-          <Image src={'/images/assets/imgs/17.jpg'} alt={''} height={300} width={300} className='h-full' />
-          <h3 className='absolute text-white text-xl font-medium group-hover:bg-white/10 group-hover:backdrop-blur-xl w-full h-full flex items-center justify-center'>Kitchen</h3>
+        <div onClick={() => setTag("kitchen")} className='relative group cursor-pointer flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
+          <Image src={'/images/assets/imgs/kitchen.avif'} alt={''} height={300} width={300} className='h-full' />
+          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "kitchen" ? "bg-black/50 backdrop-blur-sm" : ""} w-full h-full flex items-center justify-center`}>Kitchen</h3>
         </div>
-        <div onClick={() => setTag("dining")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-44 h-44 border-2 border-white'>
-          <Image src={'/images/assets/imgs/17.jpg'} alt={''} height={300} width={300} className='h-full' />
-          <h3 className='absolute text-white text-xl font-medium group-hover:bg-white/10 group-hover:backdrop-blur-xl w-full h-full flex items-center justify-center'>Dining</h3>
+        <div onClick={() => setTag("dining")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
+          <Image src={'/images/assets/imgs/dining.jpg'} alt={''} height={300} width={300} className='h-full' />
+          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "dining" ? "bg-black/50 backdrop-blur-sm":""} w-full h-full flex items-center justify-center`}>Dining</h3>
         </div>
-        <div onClick={() => setTag("office")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-44 h-44 border-2 border-white'>
-          <Image src={'/images/assets/imgs/17.jpg'} alt={''} height={300} width={300} className='h-full' />
-          <h3 className='absolute text-white text-xl font-medium group-hover:bg-white/10 group-hover:backdrop-blur-xl w-full h-full flex items-center justify-center'>Office</h3>
+        <div onClick={() => setTag("office")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
+          <Image src={'/images/assets/imgs/office.jpg'} alt={''} height={300} width={300} className='h-full' />
+          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "office" ? "bg-black/50 backdrop-blur-sm":""} w-full h-full flex items-center justify-center`}>Office</h3>
         </div>
-        <div onClick={() => setTag("commercial")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-44 h-44 border-2 border-white'>
-          <Image src={'/images/assets/imgs/17.jpg'} alt={''} height={300} width={300} className='h-full' />
-          <h3 className='absolute text-white text-xl font-medium group-hover:bg-white/10 group-hover:backdrop-blur-xl w-full h-full flex items-center justify-center'>Commercial</h3>
+        <div onClick={() => setTag("commercial")} className='relative group cursor-pointer  flex flex-col items-center justify-center rounded-full overflow-hidden w-28 h-28 md:w-44 md:h-44 border-2 border-white'>
+          <Image src={'/images/assets/imgs/commercial.jpg'} alt={''} height={300} width={300} className='h-full' />
+          <h3 className={`absolute text-white text-sm md:text-xl font-medium ${tag === "commercial" ? "bg-black/50 backdrop-blur-sm":""} w-full h-full flex items-center justify-center`}>Commercial</h3>
         </div>
       </div>
       <div className="flex flex-wrap -m-1 md:-m-2">

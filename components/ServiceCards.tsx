@@ -52,19 +52,19 @@ const ServiceCards = ({ img, title, description, feat }: CardProps) => {
         setIsOpen(true)
     }
     return (
-        <div className={` flex items-center justify-center max-w-xl smooth rounded-2xl overflow-hidden shadow-xl gap-2 ${featClass ? "h-[27rem]" : "h-[29.5rem]"}`}>
+        <div className={` flex items-center justify-center max-w-sm md:max-w-xl w-full smooth rounded-2xl overflow-hidden shadow-xl gap-2 ${featClass ? "h-[27rem]" : "h-[29.5rem]"}`}>
             <div className='w-1/2 h-full flex items-center justify-center overflow-hidden bg-gray-300' >
                 <Image src={img} alt={title} height={800} width={800} className='aspect-square hover:scale-110 smooth' />
             </div>
-            <div className='relative w-1/2 h-full flex flex-col items-start justify-start px-2.5 py-5 gap-1'>
-                <h4 className='text-[1.6rem] font-bold'>{title}</h4>
-                <p className='text-sm text-balance'>{description}</p>
+            <div className='relative w-1/2 h-full flex flex-col items-start justify-start md:px-2.5 py-5 gap-1'>
+                <h4 className='text-lg md:text-[1.6rem] font-bold text-teal'>{title}</h4>
+                <p className='text-xs md:text-sm text-balance'>{description}</p>
 
                 <div className='flex flex-col items-start justify-start gap-1 my-2 h-full'>
-                    <p className='font-semibold'>What's Included</p>
-                    <ul className={`list-inside list-disc text-balance text-sm ${featClass ? "line-clamp-4" : "line-clamp-none"} w-[15rem]`}>
+                    <p className='text-sm md:text-base font-semibold'>What's Included</p>
+                    <ul className={`list-inside list-disc text-xs md:text-sm text-wrap ${featClass ? "line-clamp-4" : "line-clamp-none"} md:w-[15rem]`}>
                         {feat.map((featName, i) => (
-                            <li key={i} className='indent-4'>
+                            <li key={i} className='indent-2 md:indent-4'>
                                 {featName}
                             </li>
                         ))}
