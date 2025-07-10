@@ -28,24 +28,23 @@ const PhoneInput = React.forwardRef<HTMLInputElement, PhoneInputProps>(
     };
 
     return (
-      <div className="flex items-center border border-teal-600 rounded-md overflow-hidden">
+      <div className="h-10 flex items-center border border-teal-600 rounded-md overflow-hidden">
         <select
           value={countryCode}
           onChange={handleCountryCodeChange}
-          className="px-2 py-2 w-28 text-black text-base focus:outline-none"
+          className="w-16 h-full lg:w-28 text-black text-base focus:outline-none"
           disabled={disabled}
-          
         >
           {codes.map((country) => (
-            <option key={country.code} value={country.dial_code}>
-              {country.code} {country.dial_code}
+            <option key={country.code} value={country.dial_code}  className='text-center'>
+              <span>{country.dial_code}</span>
             </option>
           ))}
         </select>
         <input
           type="text"
           ref={ref}
-          className={cn("flex-1 px-3 py-2 focus:outline-none text-base", className)}
+          className={cn("flex-1 px-1 py-2 focus:outline-none text-base", className)}
           placeholder="Enter phone number"
           value={phoneNumber} // Use local state to display phone number only
           onChange={handleInputChange}

@@ -52,7 +52,7 @@ const ServiceCards = ({ img, title, description, feat }: CardProps) => {
         setIsOpen(true)
     }
     return (
-        <div className={` flex items-center justify-center max-w-sm md:max-w-xl w-full smooth rounded-2xl overflow-hidden shadow-xl gap-2 ${featClass ? "h-[27rem]" : "h-[29.5rem]"}`}>
+        <div className={` flex items-center justify-center max-w-sm md:max-w-xl w-full smooth rounded-2xl overflow-hidden shadow-xl gap-2 ${featClass ? "h-[27rem]" : "h-[30rem]"}`}>
             <div className='w-1/2 h-full flex items-center justify-center overflow-hidden bg-gray-300' >
                 <Image src={img} alt={title} height={800} width={800} className='aspect-square hover:scale-110 smooth' />
             </div>

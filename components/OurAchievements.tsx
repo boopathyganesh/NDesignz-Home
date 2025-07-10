@@ -16,11 +16,11 @@ const OurAchievements = () => {
               <h2>Years of Experience</h2>
             </div>
             <div className='text-center font-medium text-base md:text-lg text-black'>
-              <h1 className='text-teal-700 text-2xl md:text-4xl font-bold'>{useScrollTriggeredCountUp(counterRef, 100, 3000)}+</h1>
+              <h1 className='text-teal-700 text-2xl md:text-4xl font-bold'>{useScrollTriggeredCountUp(counterRef, 250, 3000)}+</h1>
               <h2>Interior Projects</h2>
             </div>
             <div className='text-right font-medium text-base md:text-lg text-black'>
-              <h1 className='text-teal-700 text-2xl md:text-4xl font-bold'>{useScrollTriggeredCountUp(counterRef, 100, 3000)}+</h1>
+              <h1 className='text-teal-700 text-2xl md:text-4xl font-bold'>{useScrollTriggeredCountUp(counterRef, 150, 3000)}+</h1>
               <h2>Happy Clients</h2>
             </div>
           </div>

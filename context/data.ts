@@ -1,27 +1,27 @@
 export const expertise = [
     {
-        title: "20 Years Warranty",
+        title: "Free design consultation",
         icon: "/images/assets/warranty.png",
         content: "As Long As 20 Years On Product & Services"
     },
     {
-        title: "50 Quality Checks",
+        title: " Transparent pricing with no hidden costs",
         icon: "/images/assets/quality.png",
         content: "Prior To Dispatch And Conveyance"
     },
     {
-        title: "45 Days Delivery",
-        icon: "/images/assets/delivery.png",
-        content: "Get Customized Home Insides In Only 45 Days"
-    },
-    {
-        title: "Personalized Designer",
-        icon: "/images/assets/designer.png",
-        content: "However Novel As You May Be"
-    },
-    {
-        title: "End to End Solutions",
+        title: "150+ completed projects in Coimbatore ",
         icon: "/images/assets/solution.png",
+        content: ""
+    },
+    {
+        title: "Experienced designers and skilled craftsmen",
+        icon: "/images/assets/designer.png",
+        content: ""
+    },
+    {
+        title: "On-time delivery, every time ",
+        icon: "/images/assets/delivery.png",
         content: "We Embrace Start To Finish Administrations"
     },
 ]
@@ -50,31 +50,29 @@ export const HomeBg = [
 
 export const services = [
     {
-        id: "office",
-        title: "Office Interior",
-        image: "/images/web_asset2.jpg"
+        id: "modular-kitchens",
+        title: "Modular Kitchens",
+        image: "/images/web_asset8.jpg",
+        description: "Beautiful, practical, and custom-built modular kitchens designed for modern Indian homes. Smart storage solutions, premium finishes, and layouts tailored to your cooking style and space."
     },
     {
-        id: "residential",
-        title: "Residential Interior",
-        image: "/images/web_asset1.jpg"
+        id: "wardrobes",
+        title: "Wardrobes",
+        image: "/images/web_asset6.jpg",
+        description: "Maximize your bedroom space with sleek, functional, and stylish wardrobe designs. From sliding doors to walk-in wardrobes, we deliver custom solutions that match your needs."
     },
     {
-        id: "living",
-        title: "House Interior",
-        image: "/images/web_asset3.jpg"
+        id: "false-ceilings",
+        title: "False Ceilings",
+        image: "/images/web_asset7.jpg",
+        description: "Upgrade your interiors with elegant false ceiling designs. Integrated lighting, modern finishes, and expert installation to give your home a premium look."
     },
     {
-        id: "commercial",
-        title: "Commercial Interior",
-        image: "/images/web_asset4.jpg"
-    },
-    {
-        id: "kitchen",
-        title: "Kitchen Interior",
-        image: "/images/web_asset5.avif"
-    },
-
+        id: "complete-interiors",
+        title: "Complete Home Interiors ",
+        image: "/images/web_asset4.jpg",
+        description: "End-to-end home interior solutions. Personalized designs for every room, quality materials, and professional project management for a stress-free experience."
+    }
 ]
 
 export const ServiceData = [
@@ -89,7 +87,7 @@ export const ServiceData = [
     {
         id: "bedroom",
         title: "Bedroom Design",
-        images: ["/images/assets/3d/6.jpg","/images/assets/3d/16.jpg"],
+        images: ["/images/assets/3d/6.jpg", "/images/assets/3d/16.jpg"],
 
         description: "Your personal sanctuary deserves a design that inspires rest and rejuvenation. From cozy vibes to luxurious aesthetics, we tailor bedrooms to your taste.",
         offer: ["Custom wardrobes and storage solutions", "Designer headboards and bedding", "Mood lighting and soundproofing", "Space-efficient layouts"],
@@ -106,7 +104,7 @@ export const ServiceData = [
     {
         id: "office",
         title: "Office Design",
-        images: ["/images/assets/3d/office1.jpg","/images/assets/3d/office2.jpg"],
+        images: ["/images/assets/3d/office1.jpg", "/images/assets/3d/office2.jpg"],
         description: "Whether it’s a sleek corporate space or a vibrant home office, our designs boost productivity while maintaining a professional aesthetic.",
         offer: ["Ergonomic furniture selection",
             "Smart layouts for efficient workflows",
@@ -117,7 +115,7 @@ export const ServiceData = [
     {
         id: "dining",
         title: "Dining Room Design",
-        images: ["/images/assets/3d/dine1.jpg","/images/assets/3d/dine2.jpg"],
+        images: ["/images/assets/3d/dine1.jpg", "/images/assets/3d/dine2.jpg"],
         description: "Create a dining area that’s perfect for family meals and entertaining guests. We design spaces that are functional, elegant, and warm.",
         offer: ["Custom dining tables and seating arrangements",
             "Ambient lighting for a cozy atmosphere",
@@ -128,7 +126,7 @@ export const ServiceData = [
     {
         id: "commercial",
         title: "Commercial Design",
-        images: ["/images/assets/3d/commercial1.jpg","/images/assets/3d/commercial2.jpg"],
+        images: ["/images/assets/3d/commercial1.jpg", "/images/assets/3d/commercial2.jpg"],
         description: "Transform your business space into a visually appealing and functional environment. From offices to retail outlets, we bring your brand to life.",
         offer: ["Brand-centric retail layouts",
             "Functional workspaces for staff and customers",

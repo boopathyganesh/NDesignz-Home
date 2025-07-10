@@ -60,7 +60,7 @@ const Hero = () => {
   }
 
   return (
-    <section className='max-w-sm md:max-w-4xl lg:max-w-full h-[370px] mt-5 md:mt-32 lg:mt-0 lg:h-[750px] w-full flex items-center justify-center gap-4 bg-white/10 bg-center bg-cover bg-opacity-15 overflow-hidden'>
+    <section className='max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-full h-[370px] mt-5 md:mt-32 lg:mt-0 lg:h-[750px] w-full flex items-center justify-center gap-4 bg-white/10 bg-center bg-cover bg-opacity-15 overflow-hidden'>
       <div className='w-full h-full flex items-center justify-center relative'>
         <Carousel opts={{ loop: true, dragFree: true }} plugins={[
           Autoplay({ delay: 4000 })
@@ -68,7 +68,7 @@ const Hero = () => {
           <CarouselContent className='max-w-full w-full m-0'>
             {HomeBg.map((hero, index) => (
               <CarouselItem key={index} className='w-full flex items-center justify-center p-0 relative'>
-                <div className='max-w-sm md:max-w-3xl lg:max-w-5xl xl:max-w-9xl w-[5000px] h-[900px] bg-cover bg-center' style={{ backgroundImage: `url(${hero.Image})` }}></div>
+                <div className='max-w-3xl md:max-w-4xl lg:max-w-6xl xl:max-w-9xl w-[5000px] h-[900px] bg-cover bg-center' style={{ backgroundImage: `url(${hero.Image})` }}></div>
                 {/* <Image src={hero.Image} alt={'Banner Image'} width={1000} height={1000} className='w-full h-auto' /> */}
                 <div className='bg-black/40 absolute top-0 h-full w-full'></div>
               </CarouselItem>
@@ -79,12 +79,13 @@ const Hero = () => {
         </Carousel>
         <div className='absolute top-[25%] lg:top-[40%] left-[50%] -translate-x-[50%] transform w-full lg:w-max flex flex-col items-center justify-center gap-5 p-5 lg:rounded-2xl lg:bg-black/50'>
           <div className='flex flex-col items-center justify-center text-center'>
-            <h1 className='text-white text-xl lg:text-2xl xl:text-4xl leading-tight font-medium'>Unveil the Art of Indian Elegance - Interiors That Speak to the Soul</h1>
-            <p className='text-white/90 mt-3 max-w-xl text-base lg:text-xl'>Making your home so beautiful, you'll never want to leave</p>
+            <h1 className='text-white text-xl lg:text-2xl xl:text-4xl leading-tight font-medium'>Transform Your Home with Best Interior Designer in Coimbatore.</h1>
+            <p className='text-white/90 mt-3 max-w-xl text-base lg:text-xl'>"Custom Modular Kitchens, Wardrobes, False Ceilings, and Complete 
+Interiors Designed for You.</p>
           </div>
           <div className='flex items-center justify-center gap-5'>
-            <Button onClick={() => setOpenDialog(true)} className='hover:scale-105'>Lets Talk</Button>
-            <Link className='group' href={"/gallery"}><span className='bg-white px-4 py-3 text-teal rounded-md text-sm font-medium hover:bg-teal hover:text-white hover:scale-105'>Visit our Gallery</span></Link>
+            <Button onClick={() => setOpenDialog(true)} className='hover:scale-105'>Get Free Consultation</Button>
+            {/* <Link className='group' href={"/gallery"}><span className='bg-white px-4 py-3 text-teal rounded-md text-sm font-medium hover:bg-teal hover:text-white hover:scale-105'>Visit our Gallery</span></Link> */}
           </div>
         </div>
         {/* <div className='w-1/2 flex items-center justify-center max-h-90 overflow-y-auto'>

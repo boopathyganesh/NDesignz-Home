@@ -67,13 +67,13 @@ const Navbar = () => {
                         <Link className='text-black hover:text-teal-600' href={'/'}>Home</Link>
                     </li>
                     <li>
-                        <Link className='text-black hover:text-teal-600' href={'/gallery'}>Gallery</Link>
+                        <Link className='text-black hover:text-teal-600' href={'/about'}>About Us</Link>
                     </li>
                     <li>
                         <Link className='text-black hover:text-teal-600' href={'/services'}>Services</Link>
                     </li>
                     <li>
-                        <Link className='text-black hover:text-teal-600' href={'/about'}>About Us</Link>
+                        <Link className='text-black hover:text-teal-600' href={'/gallery'}>Gallery</Link>
                     </li>
                     <li>
                         <Link className='text-black hover:text-teal-600' href={'/contact'}>Contact</Link>
@@ -116,13 +116,13 @@ const Navbar = () => {
                             <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/'}>Home</Link>
                         </li>
                         <li>
-                            <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/gallery'}>Gallery</Link>
+                            <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/about'}>About Us</Link>
                         </li>
                         <li>
                             <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/services'}>Services</Link>
                         </li>
                         <li>
-                            <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/about'}>About Us</Link>
+                            <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/gallery'}>Gallery</Link>
                         </li>
                         <li>
                             <Link onClick={() => linkClick("")} className='text-black hover:text-teal-600' href={'/contact'}>Contact</Link>
@@ -134,7 +134,7 @@ const Navbar = () => {
                 </DialogContent>
             </Dialog>
             <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-                <DialogContent onInteractOutside={handleInteractionOutside} className="max-w-xs lg:max-w-max border border-teal" style={{ zIndex: 99999 }}>
+                <DialogContent onInteractOutside={handleInteractionOutside} className="max-w-xs sm:max-w-md lg:max-w-max border border-teal" style={{ zIndex: 9999999 }}>
                     <DialogHeader>
                         <DialogTitle></DialogTitle>
                         <DialogDescription></DialogDescription>

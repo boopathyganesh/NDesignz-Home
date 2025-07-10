@@ -26,6 +26,7 @@ const enquirySchema = z.object({
         /^(\+(\d{1,3})[\-\s]?)?(\d{10}|\d{7,15})$/,
         { message: "Invalid phone number" }
     ),
+    email: z.string().email({ message: "Invalid email address" }),
     message: z.string().min(1, { message: "Message is required" }),
 });
 
@@ -101,8 +102,8 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
 
     return (
         <Form {...form}>
-            <form onSubmit={handleSubmit(onSubmit)} action="post" className="max-h-90 overflow-y-auto">
-                <Card className="w-full max-w-sm">
+            <form onSubmit={handleSubmit(onSubmit)} action="post" className="max-h-90 max-w-sm sm:max-w-md w-full overflow-y-auto">
+                <Card className="w-full">
                     <CardHeader className="px-5 py-3">
                         <CardTitle className="text-2xl">Book a Free Consultation!</CardTitle>
                         <CardDescription>
@@ -118,6 +119,19 @@ export default function EnquiryForm({ onSuccessSubmit }: EnquireProps) {
                                     <FormLabel>Name</FormLabel>
                                     <FormControl>
                                         <Input placeholder="Enter your Name" {...field} className="w-full" disabled={loading} />
+                                    </FormControl>
+                                    {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field, fieldState }) => (
+                                <FormItem>
+                                    <FormLabel>Email</FormLabel>
+                                    <FormControl>
+                                        <Input placeholder="Enter your email" {...field} className="w-full" disabled={loading} />
                                     </FormControl>
                                     {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
                                 </FormItem>

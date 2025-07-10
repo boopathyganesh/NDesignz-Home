@@ -16,7 +16,7 @@ const OurExpertise = () => {
         </div>
         <div className='mt-10 flex flex-wrap items-center justify-center gap-4'>
           {expertise.map((item, index) => (
-            <MiniCard key={index} title={item.title} icon={item.icon} content={item.content} />
+            <MiniCard key={index} title={item.title} icon={item.icon}/>
           ))}
         </div>
       </div>
