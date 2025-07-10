@@ -67,32 +67,6 @@ export default function Home() {
         <h1 className="text-3xl font-semibold text-teal-700">Get in Touch</h1>
         <p className="text-lg">We invite you to embark on this journey with us and experience the transformative power of great design. Whether you’re looking to redesign a single room or develop an entire commercial space, <span className="text-teal font-medium">Livstyle Homes</span> is here to bring your vision to life. Reach out to us today to schedule a consultation, and let’s start crafting the space of your dreams!</p>
         <Connect />
-        <div className="flex flex-row items-center justify-center gap-5">
-          <div className="flex flex-col items-center justify-center w-20 h-20 md:w-32 md:h-32 md:gap-4">
-            <div className="text-teal font-medium md:text-xl">Call us</div>
-            <div className="w-12 h-12 md:w-20 md:h-20 bg-teal-500 rounded-2xl">
-              <Link href={"tel:+918610933642"}>
-                <Image src={"/images/assets/phone.png"} alt={"Contact"} height={500} width={500} className="" />
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center w-20 h-20 md:w-32 md:h-32 md:gap-4">
-            <div className="text-teal font-medium md:text-xl">Mail us</div>
-            <div className="w-12 h-12 md:w-20 md:h-20 bg-teal-500 rounded-2xl">
-              <Link href={"https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=livstylehomescbe@gmail.com"}>
-                <Image src={"/images/assets/mail.png"} alt={"Contact"} height={500} width={500} className="" />
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center w-20 h-20 md:w-32 md:h-32 md:gap-4">
-            <div className="text-teal font-medium md:text-xl">Visit us</div>
-            <div className="w-12 h-12 md:w-20 md:h-20 bg-teal-500 rounded-2xl">
-              <Link href={"https://maps.app.goo.gl/46bENTHdTdZ9UAsh6"}>
-                <Image src={"/images/assets/address.png"} alt={"Contact"} height={500} width={500} className="" />
-              </Link>
-            </div>
-          </div>
-        </div>
       </section>
     </main>
   );
