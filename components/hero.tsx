@@ -80,7 +80,7 @@ const Hero = () => {
         <div className='absolute top-[25%] lg:top-[40%] left-[50%] -translate-x-[50%] transform w-full lg:w-max flex flex-col items-center justify-center gap-5 p-5 lg:rounded-2xl lg:bg-black/50'>
           <div className='flex flex-col items-center justify-center text-center'>
             <h1 className='text-white text-xl lg:text-2xl xl:text-4xl leading-tight font-medium'>Transform Your Home with Best Interior Designer in Coimbatore.</h1>
-            <p className='text-white/90 mt-3 max-w-xl text-base lg:text-xl'>"Custom Modular Kitchens, Wardrobes, False Ceilings, and Complete 
+            <p className='text-white/90 mt-3 max-w-xl text-base lg:text-xl'>Custom Modular Kitchens, Wardrobes, False Ceilings, and Complete 
 Interiors Designed for You.</p>
           </div>
           <div className='flex items-center justify-center gap-5'>

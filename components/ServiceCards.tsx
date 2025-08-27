@@ -53,8 +53,8 @@ const ServiceCards = ({ img, title, description, feat }: CardProps) => {
     }
     return (
         <div className={` flex items-center justify-center max-w-sm md:max-w-xl w-full smooth rounded-2xl overflow-hidden shadow-xl gap-2 ${featClass ? "h-[27rem]" : "h-[30rem]"}`}>
-            <div className='w-1/2 h-full flex items-center justify-center overflow-hidden bg-gray-300' >
-                <Image src={img} alt={title} height={800} width={800} className='aspect-square hover:scale-110 smooth' />
+            <div className='w-1/2 h-full flex items-center justify-center overflow-hidden bg-gray-300 relative'>
+                <Image src={img} alt={title} fill style={{objectFit:'cover'}} className='hover:scale-110 smooth transition-transform duration-300 object-cover object-center' />
             </div>
             <div className='relative w-1/2 h-full flex flex-col items-start justify-start md:px-2.5 py-5 gap-1'>
                 <h4 className='text-lg md:text-[1.6rem] font-bold text-teal'>{title}</h4>
