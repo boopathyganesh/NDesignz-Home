@@ -20,6 +20,8 @@ import {
     AlertDialogTitle,
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
+import Link from "next/link";
+import Image from "next/image";
 
 const enquirySchema = z.object({
     name: z.string().min(1, { message: "Name is required" }),
@@ -27,6 +29,7 @@ const enquirySchema = z.object({
         /^(\+(\d{1,3})[\-\s]?)?(\d{10}|\d{7,15})$/,
         { message: "Invalid phone number" }
     ),
+    email: z.string().email({ message: "Invalid email address" }),
     message: z.string().min(1, { message: "Message is required" }),
 });
 
@@ -93,12 +96,12 @@ export default function ConnectForm({ onSuccessSubmit }: EnquireProps) {
 
     return (
         <Form {...form}>
-            <form onSubmit={handleSubmit(onSubmit)} action="post" className="max-h-90 overflow-y-auto">
-                <div className="flex flex-col items-center justify-start w-full gap-5 my-8 md:my-0">
+            <form onSubmit={handleSubmit(onSubmit)} action="post" className="max-h-[800px] flex flex-col items-center justify-center w-full overflow-y-auto">
+                <div className="flex flex-col items-center justify-start w-full lg:gap-5 my-5 md:my-0">
                     <div className="flex items-center justify-center w-full">
-                        <h1 className="text-2xl md:text-4xl font-semibold text-teal-700 mb-3 text-center">Let’s Start Your Design Journey!</h1>
+                        <h1 className="text-2xl md:text-3xl font-semibold text-teal-700 mb-3 text-center">Let’s Start Your Design Journey!</h1>
                     </div>
-                    <div className="w-full flex flex-col items-center justify-start gap-5 px-10">
+                    <div className="w-full flex flex-col items-center justify-start lg:gap-5 px-10">
                         <FormField
                             control={form.control}
                             name="name"
@@ -107,6 +110,19 @@ export default function ConnectForm({ onSuccessSubmit }: EnquireProps) {
                                     <FormLabel>Name</FormLabel>
                                     <FormControl className="w-full">
                                         <Input placeholder="Enter your Name" {...field} className="w-full" disabled={loading} />
+                                    </FormControl>
+                                    {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field, fieldState }) => (
+                                <FormItem className="w-full">
+                                    <FormLabel>Email</FormLabel>
+                                    <FormControl>
+                                        <Input placeholder="Enter your Email" {...field} className="w-full" disabled={loading} />
                                     </FormControl>
                                     {fieldState.error && <FormMessage>{fieldState.error.message}</FormMessage>}
                                 </FormItem>
@@ -139,11 +155,38 @@ export default function ConnectForm({ onSuccessSubmit }: EnquireProps) {
                             )}
                         />
                     </div>
-                    <div>
+                    <div className="mt-4">
                         <Button type="submit" className="w-full hover:bg-teal-500 hover:text-black smooth" disabled={loading}>
                             {loading ? "Sending..." : "Send!"}
                         </Button>
                         {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+                    </div>
+                </div>
+                <h3 className="max-w-sm lg:max-w-lg italic tex-center w-full text-base py-2">Book a free consultation and get a custom quote within 24 hours!</h3>
+                <div className="flex flex-row items-center justify-center gap-5 mt-5">
+                    <div className="flex flex-col items-center justify-center w-20 h-20 md:w-32 md:h-32 md:gap-1">
+                        <div className="text-teal font-medium md:text-xl">Call us</div>
+                        <div className="w-12 h-12 md:w-20 md:h-20 bg-teal-500 rounded-2xl">
+                            <Link href={"tel:+918610933642"}>
+                                <Image src={"/images/assets/phone.png"} alt={"Contact"} height={500} width={500} className="" />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-center justify-center w-20 h-20 md:w-32 md:h-32 md:gap-1">
+                        <div className="text-teal font-medium md:text-xl">Mail us</div>
+                        <div className="w-12 h-12 md:w-20 md:h-20 bg-teal-500 rounded-2xl">
+                            <Link href={"https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=livstylehomescbe@gmail.com"}>
+                                <Image src={"/images/assets/mail.png"} alt={"Contact"} height={500} width={500} className="" />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-center justify-center w-20 h-20 md:w-32 md:h-32 md:gap-1">
+                        <div className="text-teal font-medium md:text-xl">Visit us</div>
+                        <div className="w-12 h-12 md:w-20 md:h-20 bg-teal-500 rounded-2xl">
+                            <Link href={"https://maps.app.goo.gl/46bENTHdTdZ9UAsh6"}>
+                                <Image src={"/images/assets/address.png"} alt={"Contact"} height={500} width={500} className="" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </form>

@@ -7,13 +7,13 @@ interface Props {
 }
 const CreativeCard = ({ image, text, content }: Props) => {
   return (
-    <div className='flex items-center justify-center rounded-3xl relative w-64 h-64 md:w-80 md:h-80 border border-teal overflow-hidden p-3 group smooth' style={{ zIndex: 999 }}>
-      <Image src={image} alt={text} height={800} width={800} style={{ zIndex: 1010 }} priority />
+    <div className='flex items-center justify-center rounded-3xl relative w-64 h-64 md:w-80 md:h-80 border border-teal overflow-hidden p-3 group smooth' style={{ zIndex: 51 }}>
+      <Image src={image} alt={text} height={800} width={800} style={{ zIndex: 54 }} priority />
       <div style={{ zIndex: 1200 }} className='flex flex-col items-center justify-center gap-3 text-center absolute top-0 left-[50%] transform smooth -translate-x-[50%] translate-y-96 group-hover:translate-y-0 backdrop-blur-md h-full w-full bg-white/40'>
         <h1 className='text-lg md:text-2xl font-medium text-teal'>{text}</h1>
         <p className='max-w-72 text-xs md:text-sm'>{content}</p>
       </div>
-      <h1 className='text-2xl font-semibold text-teal-700 absolute top-0 h-full w-full text-center flex items-center justify-center backdrop-blur-sm bg-white/60' style={{ zIndex: "1011" }}>{text}</h1>
+      <h1 className='text-2xl font-semibold text-teal-700 absolute top-0 h-full w-full text-center flex items-center justify-center backdrop-blur-sm bg-white/60' style={{ zIndex: 55 }}>{text}</h1>
     </div>
   )
 }
@@ -26,7 +26,7 @@ const CreativeJourney = () => {
           <h1 className='text-2xl md:text-4xl text-teal-700 font-semibold'>Creative Journey of Livestyle Homes</h1>
           <p className='text-base'>At Livestyle Homes, we believe that every space tells a story. Our creative journey is built around bringing that story to life, turning your vision into a stunning reality that reflects your personality, values, and lifestyle. As seasoned interior and exterior designers, we blend aesthetic beauty with functionality, offering a seamless experience from conception to completion.</p>
         </div>
-        <div className='flex items-center justify-center gap-5 flex-wrap my-5 max-w-7xl'>
+        <div className='flex items-center justify-center gap-5 flex-wrap my-5 max-w-7xl z-50'>
           <CreativeCard image={'/images/assets/vision.png'} text={'Discovery & Vision Setting'} content='We begin by understanding your desires, preferences, and inspirations. During this stage, we delve deep into your goals and dreams for the space, whether it’s a modern home, a sophisticated office, or an inviting outdoor area. We carefully consider every detail to ensure we capture your unique style and requirements.' />
           <CreativeCard image={'/images/assets/proposal.png'} text={'Tailored Design Proposal'} content='With your vision in mind, we craft a personalized design that harmonizes modern aesthetics with timeless Indian cultural elements. From spatial planning and color palettes to furniture selection and decor accents, each aspect is thoughtfully curated. We involve you at every stage, making adjustments based on your feedback, ensuring the design truly resonates with your personality.' />
           <CreativeCard image={'/images/assets/material.png'} text={'Material Selection & Sustainability'} content='We believe that the foundation of any great design lies in the quality and sustainability of its materials. In this phase, we carefully select materials that align with your vision while ensuring durability and environmental responsibility. From eco-friendly wood options to sustainably sourced fabrics and low-VOC paints, we prioritize choices that are both beautiful and mindful of our planet.' />

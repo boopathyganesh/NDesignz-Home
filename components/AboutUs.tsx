@@ -1,10 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Bed from "@/public/images/svg/bed.svg"
-import MiniCard from './ui/miniCard'
-import { expertise } from '@/context/data'
-import { Parallax } from 'react-scroll-parallax'
-
 
 const AboutUs = () => {
   return (
@@ -12,7 +7,12 @@ const AboutUs = () => {
       <div className='flex flex-col items-center justify-center gap-10'>
         <div className='flex flex-col items-center justify-center text-center'>
           <h1 className='text-2xl lg:text-4xl font-semibold text-teal-700 mb-3'>Who We Are?</h1>
-          <p className='text-base lg:text-lg font-light text-black'>At <span className='text-teal font-semibold'>Livstyle Homes</span>, we bring the heart of Indian culture into every corner of your home. With over 5 years of experience in designing interiors that blend style, functionality, and a touch of tradition, we specialize in making your dream spaces a reality. Our team of expert designers and craftsmen draw inspiration from India's rich heritage to give each space a unique, soulful touch.</p>
+          <p className='text-base lg:text-lg font-light text-black'><span className='text-teal font-semibold'>Livstyle Homes</span> is a trusted interior designer and interior
+            design studio in Coimbatore, specializing in stunning modular kitchens,
+            wardrobes, false ceilings, and full-home interiors. Our experienced team delivers
+            personalized designs, premium materials, and flawless execution—all tailored to
+            your lifestyle and budget. Let us transform your space into something truly
+            extraordinary</p>
         </div>
         <div className='flex flex-col md:flex-row items-center justify-center gap-5'>
           <div className='w-full md:w-1/2 flex flex-col items-center justify-center text-center gap-2'>

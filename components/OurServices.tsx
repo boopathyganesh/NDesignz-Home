@@ -36,7 +36,7 @@ const OurServices = () => {
                         <CarouselContent className='max-w-sm md:max-w-3xl lg:max-w-7xl w-full'>
                             {services.map((item, index) => (
                                 <CarouselItem key={index} className='basis-auto lg:basis-1/3'>
-                                    <CarousalCard title={item.title} icon={item.image} id={item.id} />
+                                    <CarousalCard title={item.title} icon={item.image} id={item.id} description={item.description} />
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
