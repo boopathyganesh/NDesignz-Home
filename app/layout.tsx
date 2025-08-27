@@ -39,6 +39,56 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Livstyle Homes" />
         <link rel="manifest" href="/site.webmanifest" />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "name": "LivStyle Homes",
+                  "url": "https://livstylehomes.com/",
+                  "description": "Modern interior design services in Coimbatore. Residential, office, and commercial designs.",
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://livstylehomes.com/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
+                },
+                {
+                  "@type": "Organization",
+                  "name": "LivStyle Homes",
+                  "url": "https://livstylehomes.com/",
+                  "logo": "https://livstylehomes.com/favicon-32x32.png",
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+918610933642",
+                    "contactType": "customer service",
+                    "areaServed": "IN"
+                  },
+                  "sameAs": [
+                    "https://www.facebook.com/profile.php?id=61571037243716#",
+                    "https://www.instagram.com/livstylehomes/",
+                    "https://www.linkedin.com/in/livstyle-homes-a5a165371/"
+                  ]
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://livstylehomes.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://livstylehomes.com/about" },
+                    { "@type": "ListItem", "position": 3, "name": "Gallery", "item": "https://livstylehomes.com/gallery" },
+                    { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://livstylehomes.com/contact" },
+                    { "@type": "ListItem", "position": 5, "name": "Services", "item": "https://livstylehomes.com/services" }
+                  ]
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body className={`${inter.className} bg-white`}>
         <AuthProvider>
